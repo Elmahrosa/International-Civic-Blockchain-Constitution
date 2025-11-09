@@ -14,3 +14,7 @@
 - Template added: compliance/templates/legal_safety.md
 - Egypt profile added: compliance/countries/egypt.md
 - Legal safety enforced for all onboarding nations
+## [2025-11-10] Governance Layer Activated
+- Roles defined: Citizen, Validator, Founder
+- Badge logic enforced via governance/badge_logic.md
+- Treasury rules committed for vault creation and asset injection
