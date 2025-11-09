@@ -23,3 +23,7 @@
 - Badge flow enforced
 - Scripts added: petition_lock.bat, badge_gate.bat, onboard.sh
 - Enforcement: petition-first, badge-gated activation
+## [2025-11-10] Audits Layer Activated
+- Transparency log created for Egypt vault
+- Certification log initiated with version history
+- Integrity checks documented for petition, badges, treasury, and compliance
