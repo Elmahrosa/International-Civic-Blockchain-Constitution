@@ -10,3 +10,7 @@
 - Petition ID: PET-0001 (Egypt)
 - Badge tiers enforced: Citizen, Validator, Founder
 - Nation onboarded: Egypt (Elmahrosa authority)
+## [2025-11-10] Compliance Templates Activated
+- Template added: compliance/templates/legal_safety.md
+- Egypt profile added: compliance/countries/egypt.md
+- Legal safety enforced for all onboarding nations
