@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "authority": "Elmahrosa",
+  "petition": {
+    "id": "PET-0001",
+    "nation": "Egypt",
+    "status": "open",
+    "link": "https://www.change.org/p/join-the-movement-sign-the-petition-to-regulate-digital-currencies-in-egypt",
+    "signatures_required": "1,000,000+",
+    "milestones": ["10k", "100k", "1M"]
+  },
+  "badges": {
+    "Citizen": "active",
+    "Validator": "active",
+    "Founder": "active"
+  },
+  "vaults": [
+    {
+      "nation": "Egypt",
+      "address": "F1YLmukcxAyZj6zVpi2XaVctmYnuZQB5uHpd3uUpXxr6",
+      "assets": ["TGR", "ERT"],
+      "status": "active"
+    }
+  ],
+  "audits": {
+    "transparency_log": "audits/transparency_log.md",
+    "certification_log": "audits/certification_log.md",
+    "integrity_checks": "audits/integrity_checks.md"
+  }
+}
