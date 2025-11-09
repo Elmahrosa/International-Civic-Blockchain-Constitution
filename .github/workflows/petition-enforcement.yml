@@ -1,0 +1,14 @@
+name: Petition Enforcement
+
+on: [pull_request]
+
+jobs:
+  check-petition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify petition proof
+        run: |
+          if ! grep -qi "petition" <<< "${{ github.event.pull_request.body }}"; then
+            echo "❌ Petition proof missing. Sign first: https://www.change.org/p/join-the-movement-sign-the-petition-to-regulate-digital-currencies-in-egypt"
+            exit 1
+          fi
