@@ -58,3 +58,102 @@ The International Civic Blockchain Constitution anchors the following public rep
 8. [TEOS-NFT-AI-Generator](https://github.com/Elmahrosa/TEOS-NFT-AI-Generator) — NFT minting, royalties, staking  
 9. [salma-unity-care-hospital](https://github.com/Elmahrosa/salma-unity-care-hospital) — social impact and healthcare  
 
+# International Civic Blockchain Constitution
+
+## About
+The **International Civic Blockchain Constitution** is a global civic-first framework anchored by **Elmahrosa** as organizational authority.  
+It enforces:
+- Petition-first onboarding  
+- Badge verification at every layer  
+- Transparent vault registry  
+- Rigorous logging for compliance and trust  
+
+**Goal**: Invite humanity to join the digital resurrection under one charter, balancing civic-first governance with operational clarity.  
+Key folders:  
+- `civic/` → petition flows, humanitarian projects  
+- `products/` → FPBE Bank, NFT Generator, Gold Reserve  
+- `audits/` → transparency logs, AI Auditor  
+- `registry/` → product registry, reserve.json  
+- `tokens/` → TEOS + ERT injection  
+
+---
+
+## Roadmap — Earnings First, Anchoring Later
+
+### Purpose
+- This constitution is civic-first: petition-based onboarding, badge enforcement, transparent vault registry, and rigorous logging.  
+- **Operational backbone**: FPBE Bank handles flows and custody.  
+- **Final anchor of trust**: Teos-Gold-Reserve, activated only after the ecosystem earns sufficient on-chain liquidity to purchase real gold and deposit it with FPBE.  
+
+---
+
+### Step 1 — Civic Mixer (Teos-Civic-Mixer)
+- Petition-first flows and badge-gated onboarding for clean civic liquidity.  
+- Earnings: transaction fees, early staking unlocks.  
+- Transparency: audits/transparency_log.md updates for each mixer release.  
+- Fixes: petition link refresh, badge sync.  
+
+### Step 2 — FPBE Bank Backbone
+- Route all civic and treasury flows through FPBE as the operational core.  
+- Earnings: treasury shares, validator fees, custody services.  
+- Transparency: custody events and vault changes logged in audits/transparency_log.md.  
+- **Note**: This is where gold will ultimately be deposited.  
+
+### Step 3 — Gaza Reconstruction
+- Humanitarian pipelines with donation flows and impact tracking.  
+- Earnings: donation credits, civic reputation.  
+- Transparency: inflows/outflows logged in audits/transparency_log.md.  
+- Fixes: Firebase sync, petition enforcement.  
+
+### Step 4 — ERT Launch
+- Founder injection and activation of TEOS + ERT with staking and swaps.  
+- Earnings: staking rewards, swap fees, validator participation.  
+- Transparency: audits/token_events.md and transparency_log.md.  
+- Fixes: token address sync, mixer verification.  
+
+### Step 5 — Pi Smart City
+- Governance and civic services via Pi SDK for urban coordination.  
+- Earnings: validator shares, treasury flows tied to city services.  
+- Transparency: service KPIs and validator maps in dashboard modules.  
+- Fixes: SDK integration, badge enforcement.  
+
+### Step 6 — AI Auditor
+- Automated transparency enforcement, anomaly detection, and reputational scoring.  
+- Earnings: validator bonuses tied to audit compliance; contributor reputation accrual.  
+- Transparency: periodic audit runs logged in audits/transparency_log.md.  
+- Fixes: audit engine rerun, log sync.  
+
+### Step 7 — NFT Generator
+- Minting, royalties, and staking-enabled creator economy.  
+- Earnings: mint fees, royalties, staking rewards.  
+- Transparency: royalties ledger entries in dashboard/integrity_ledger.md.  
+- Fixes: wallet sync, royalty engine.  
+
+### Step 8 — Salma Hospital
+- Healthcare impact rails: donations, service credits, and patient-support flows.  
+- Earnings: donation-based flows, service credits, outcome-linked rewards.  
+- Transparency: healthcare-specific reports in audits/transparency_log.md.  
+- Fixes: file renaming, civic sync.  
+
+### Step 9 — Teos-Gold-Reserve (Activated After Earnings)
+- Convert earned liquidity into real gold; deposit into FPBE Bank vault for final trust anchor.  
+- **Activation criteria**:  
+  - Sustained ecosystem TVL above target threshold.  
+  - 90-day audit-clean liquidity flows recorded in transparency_log.md.  
+  - Custody and compliance checks passed per treasury_rules.md.  
+- Earnings: gold-backed yield mechanics; treasury stability and credibility.  
+- Transparency: proof-of-reserve entries and vault deposit events logged in audits/transparency_log.md.  
+- **Note**: This is the last step — only after strong liquidity is earned through prior steps.  
+
+---
+
+### Contributor Checklist
+- Update **audits/transparency_log.md** with clear, timestamped entries.  
+- Align with **compliance/** (treasury_rules.md, custody.md).  
+- Sync workflows (petition-enforcement.yml) with civic and registry changes.  
+- Map PRs to relevant module folders with rationale in commit messages.  
+
+---
+
+### Non-Financial Notice
+This roadmap describes protocol mechanics and governance flows. It is not financial advice. Contributors must follow local regulations and repo compliance documents.
