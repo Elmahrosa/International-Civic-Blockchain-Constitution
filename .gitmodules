@@ -22,3 +22,6 @@
 [submodule "civic/fpbe-bank"]
 	path = civic/fpbe-bank
 	url = https://github.com/Elmahrosa/FPBE-First-Pimisr-Bank-Elmahrosa
+[submodule "projects/salma-hospital"]
+	path = projects/salma-hospital
+	url = https://github.com/Elmahrosa/salma-unity-care-hospital
