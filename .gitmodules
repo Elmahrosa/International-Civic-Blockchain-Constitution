@@ -1,0 +1,21 @@
+[submodule "civic/mixer"]
+	path = civic/mixer
+	url = https://github.com/Elmahrosa/Teos-Civic-Mixer
+[submodule "projects/gaza"]
+	path = projects/gaza
+	url = https://github.com/Elmahrosa/Digital-Reconstruction-of-Gaza
+[submodule "tokens/ert-launch"]
+	path = tokens/ert-launch
+	url = https://github.com/Elmahrosa/ERT-LAUNCH
+[submodule "projects/pi-smart-city"]
+	path = projects/pi-smart-city
+	url = https://github.com/Elmahrosa/ElMahrosa-Pi-Smart-City
+[submodule "treasury/gold-reserve"]
+	path = treasury/gold-reserve
+	url = https://github.com/Elmahrosa/Teos-Gold-Reserve
+[submodule "audits/ai-auditor"]
+	path = audits/ai-auditor
+	url = https://github.com/Elmahrosa/TEOS-AI-Auditor
+[submodule "products/teosnft"]
+	path = products/teosnft
+	url = https://github.com/Elmahrosa/TEOS-NFT-AI-Generator
