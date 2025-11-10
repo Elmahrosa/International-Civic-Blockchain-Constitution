@@ -19,3 +19,6 @@
 [submodule "products/teosnft"]
 	path = products/teosnft
 	url = https://github.com/Elmahrosa/TEOS-NFT-AI-Generator
+[submodule "civic/fpbe-bank"]
+	path = civic/fpbe-bank
+	url = https://github.com/Elmahrosa/FPBE-First-Pimisr-Bank-Elmahrosa
