@@ -1,0 +1,11 @@
+[
+  {"product_id":"PRD-MIXER","name":"Teos-Civic-Mixer","requirements":{"petition_signed":true,"badge_required":"Citizen"}},
+  {"product_id":"PRD-FPBE","name":"FPBE Bank","requirements":{"petition_signed":true,"badge_required":"Validator"}},
+  {"product_id":"PRD-GAZA","name":"Digital-Reconstruction-of-Gaza","requirements":{"petition_signed":true,"badge_required":"Citizen"}},
+  {"product_id":"PRD-ERT","name":"ERT-LAUNCH","requirements":{"petition_signed":true,"badge_required":"Founder"}},
+  {"product_id":"PRD-PISMART","name":"ElMahrosa-Pi-Smart-City","requirements":{"petition_signed":true,"badge_required":"Validator"}},
+  {"product_id":"PRD-AUDITOR","name":"TEOS-AI-Auditor","requirements":{"petition_signed":true,"badge_required":"Validator"}},
+  {"product_id":"PRD-NFT","name":"TEOS-NFT-AI-Generator","requirements":{"petition_signed":true,"badge_required":"Citizen"}},
+  {"product_id":"PRD-SALMA","name":"Salma Hospital","requirements":{"petition_signed":true,"badge_required":"Citizen"}},
+  {"product_id":"PRD-GOLD","name":"Teos-Gold-Reserve","requirements":{"petition_signed":true,"badge_required":"Founder"}}
+]
