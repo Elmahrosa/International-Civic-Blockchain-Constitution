@@ -19,3 +19,13 @@
 - salma-unity-care-hospital → social impact and healthcare  
 
 **Status:** All 9 repos linked under International Constitution hub. Petition-first, badge-gated, treasury-audited.  
+## Transparency Log — Template
+
+### Event Title
+- Date: YYYY-MM-DD
+- Module: (e.g., Civic Mixer, FPBE Bank, NFT Generator)
+- Action: (e.g., petition enforced, token injected, donation routed)
+- Wallets: [list or anonymized IDs]
+- Amounts: [tokens, credits, or fees]
+- Status: success / error / pending
+- Notes: rationale or fix applied
