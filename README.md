@@ -189,3 +189,19 @@ The Elmahrousa Civic Resurrection Engine is a **petition-first, badge-gated civi
 
 ## License
 Civic-first, open governance license — contributions must comply with petition-first and badge logic enforcement.
+## 🔐 Dual Licensing
+
+This repository and all linked civic-first modules (FPBE Bank, TEOSNFT, Gaza Dashboard, Teos-Civic-Mixer, Civic Vault, Petition Engine, Badge Verifier, Treasury Registry, AI Auditor) are governed by a dual licensing model:
+
+- **Community License (MIT)**  
+  Free and open-source for civic contributors, students, and humanitarian partners.  
+  → [LICENSE](./LICENSE)
+
+- **Enterprise License**  
+  Required for governments, NGOs, and institutions needing compliance, custody guarantees, and audit-ready transparency.  
+  → [LICENSE-Enterprise.md](./LICENSE-Enterprise.md)
+
+All enterprise actions are logged in `chapter_resurrection.md`, verified via badge logic, and tracked in the vault registry.
+
+For licensing inquiries, contact **Elmahrosa International — Coordinating Authority**.  
+GitHub: [https://github.com/Elmahrosa](https://github.com/Elmahrosa)
