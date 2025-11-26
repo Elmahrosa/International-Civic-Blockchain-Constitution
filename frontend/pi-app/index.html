@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>International Civic Constitution — Pi Ratify</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 16px; color: #111; background: #f8fbff; }
+    .card { max-width: 520px; margin: 0 auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);}
+    .qr { text-align:center; margin: 16px 0; }
+    button { display:block; width:100%; padding:12px; border:0; background:#2a9df4; color:white; border-radius:8px; font-size:16px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Ratify the Civic Constitution</h1>
+    <p>Open this page in Pi Browser or scan the QR code with your Pi Browser to ratify (KYC required).</p>
+
+    <div class="qr">
+      <canvas id="qrcanvas"></canvas>
+    </div>
+
+    <button id="deepLink">Open in Pi Browser</button>
+    <p style="font-size:13px; color:#666; margin-top:12px;">By ratifying you accept the Constitution. No fee required.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script>
+    // Deep link format (example). Replace with your real ratify link.
+    const ratifyUrl = "https://your-app.com/ratify?redirect=pi://ratify?contract=CivicConstitution";
+    // For Pi Browser deep linking often uses custom pi:// or web+pi: (adapt if needed)
+    const deep = "pi://open?url=" + encodeURIComponent(ratifyUrl);
+
+    // Generate QR
+    const canvas = document.getElementById('qrcanvas');
+    QRCode.toCanvas(canvas, ratifyUrl, { width: 240 }, function (error) {
+      if (error) console.error(error);
+    });
+
+    document.getElementById('deepLink').addEventListener('click', function () {
+      // Try pi deep link
+      window.location.href = deep;
+      // fallback: open web page
+      setTimeout(()=>{ window.open(ratifyUrl, '_blank'); }, 300);
+    });
+
+  </script>
+</body>
+</html>
