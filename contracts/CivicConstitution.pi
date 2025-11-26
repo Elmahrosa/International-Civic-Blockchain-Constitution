@@ -1,0 +1,73 @@
+// CivicConstitution.pi
+// Minimal Pi Script style pseudocode for Civic Constitution
+// NOTE: adapt to actual Pi Script compiler / SDK syntax if different.
+
+module CivicConstitution {
+  use kyc = "pi:kyc/v1";        // Pi KYC integration (placeholder)
+  use events = "pi:events/v1";
+
+  // Citizen record
+  struct Citizen {
+    u64 reputation;
+    bool ratified;
+    u64 ratifiedAt;
+    bytes soulboundNFT; // optional token id or CID
+  }
+
+  // Storage
+  map<address, Citizen> public citizens;
+  u64 public totalRatified = 0;
+  address public governanceContract; // optional governance module address
+  address public votingContract;
+  address public ubiContract;
+  address public admin; // multisig or deployer
+
+  // Events
+  event NewCitizen(address indexed who, u64 at);
+  event RatifiedLegacy(address indexed who, u64 at);
+
+  // Init
+  entrypoint init(address _admin, address _votingContract, address _ubiContract) {
+    require(msg.sender == tx.origin, "init only by EOA");
+    admin = _admin;
+    votingContract = _votingContract;
+    ubiContract = _ubiContract;
+  }
+
+  // Ratify with Pi KYC: user must be KYC verified in Pi
+  entrypoint ratify() {
+    // placeholder kyc check; adapt to real KYC call
+    if (!kyc.isVerified(msg.sender)) revert("KYC required");
+    if (citizens[msg.sender].ratified) revert("Already ratified");
+    citizens[msg.sender] = Citizen{
+      reputation: 10u64,
+      ratified: true,
+      ratifiedAt: now(),
+      soulboundNFT: ""
+    };
+    totalRatified += 1u64;
+    events.emit("NewCitizen", msg.sender, now());
+  }
+
+  // Admin ratify legacy addresses (for migration)
+  entrypoint ratifyLegacy(address who) {
+    require(msg.sender == admin, "only admin");
+    if (!citizens[who].ratified) {
+      citizens[who] = Citizen{ reputation: 5u64, ratified: true, ratifiedAt: now(), soulboundNFT: "" };
+      totalRatified += 1u64;
+      events.emit("RatifiedLegacy", who, now());
+    }
+  }
+
+  // Link other modules (voting/ubi)
+  entrypoint setModule(bytes moduleName, address moduleAddr) {
+    require(msg.sender == admin, "admin only");
+    if (moduleName == "voting") votingContract = moduleAddr;
+    else if (moduleName == "ubi") ubiContract = moduleAddr;
+  }
+
+  // Read helper
+  public function isRatified(address who) : bool {
+    return citizens[who].ratified;
+  }
+}
