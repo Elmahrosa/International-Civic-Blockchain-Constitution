@@ -1,0 +1,22 @@
+{
+  "parcelId": "CA-ON-12345",
+  "canonicalId": "canada:on:CA-ON-12345",
+  "geometryWKT": "POLYGON((-79.3832 43.6532, -79.3820 43.6532, -79.3820 43.6544, -79.3832 43.6544, -79.3832 43.6532))",
+  "geometryCID": "bafybeigdyrzt5fakecidforgeojsonexample",
+  "country": "Canada",
+  "jurisdiction": "Ontario Municipal District",
+  "ownerRecords": [
+    {
+      "ownerId": "did:elmahrosa:person:0xabc123",
+      "ownerType": "individual",
+      "ownershipType": "freehold",
+      "percentage": 100,
+      "registeredAt": "2025-11-26T00:00:00Z",
+      "evidenceCID": "bafybeiafakecidfordeedpdf"
+    }
+  ],
+  "legalReferences": ["Ontario Land Titles Act sec 12.3"],
+  "onChainAnchor": "0xFAKEANCHORTRANSACTIONHASH1234567890abcdef",
+  "metadataVersion": "1.0.0",
+  "notes": "Example anchor registered for demonstration."
+}
