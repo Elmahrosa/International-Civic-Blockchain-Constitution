@@ -10,7 +10,9 @@ A mobile-first, KYC-secured civic constitution and reference implementation for 
 > For the full license text, see [TEOS Egypt Sovereign License (TESL)](https://github.com/Elmahrosa/Teos-Pharaoh-Portal/blob/main/TESL.md).
 > 
 > **Initial Author:** Elmahrosa International  
-> **Governing law and venue:** Cairo, Arab Republic of Egypt.## Quick start (developer)
+> **Governing law and venue:** Cairo, Arab Republic of Egypt.
+>
+> ## Quick start (developer)
 ```bash
 git clone https://github.com/Elmahrosa/International-Civic-Pi-Constitution
 cd International-Civic-Pi-Constitution
