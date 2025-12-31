@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "echo \"No linter configured\"",
     "clean": "rimraf coverage"
   },
   "dependencies": {
