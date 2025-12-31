@@ -1,3 +1,27 @@
-"scripts": {
-  "test": "jest"
+{
+  "name": "teos-governance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Isolated TEOS Governance schema project with Jest tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll",
+    "lint": "echo \"No linter configured\""
+  },
+  "keywords": ["TEOS", "governance", "blockchain", "civic", "schema"],
+  "author": "TEOS",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  }
 }
