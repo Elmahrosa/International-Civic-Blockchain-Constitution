@@ -9,7 +9,17 @@
     "amendment": 0.80
   },
   "enforcement": {
-    "description": "Voting weight is active only after badge verification and petition proof approval by TEOS validators."
+    "description": "Voting weight is active only after badge verification and petition proof approval by TEOS validators. All votes are logged for audit purposes."
+  },
+  "ValidatorMetrics": {
+    "uptimeWeightMultiplier": true,
+    "civicActivityBonus": true,
+    "maxWeight": 15
+  },
+  "AuditTrail": {
+    "voteLoggingRequired": true,
+    "signatureVerificationMandatory": true,
+    "slashingEventsPublic": true
   }
 }
 
