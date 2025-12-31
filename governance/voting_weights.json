@@ -1,0 +1,14 @@
+{
+  "weights": {
+    "Citizen": 1,
+    "Validator": 5,
+    "Founder": 10
+  },
+  "quorum": {
+    "default": 0.66,
+    "amendment": 0.80
+  },
+  "enforcement": {
+    "description": "Voting weight is active only after badge verification and petition proof approval by TEOS validators."
+  }
+}
