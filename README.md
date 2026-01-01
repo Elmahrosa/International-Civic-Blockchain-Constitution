@@ -78,19 +78,6 @@ International-Civic-Blockchain-Constitution/
 All modules feed final credibility into **FPBE Bank vault custody**, with gold anchoring activated only after sustained earnings and audit clearance.
 
 ---
-
-## 🚀 Developer Quick Start
-
-```bash
-git clone https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution
-cd International-Civic-Blockchain-Constitution
-
-# optional dev dependencies
-# node scripts/deploy.js --network=testnet
-````
-
----
-
 ## 🤝 Contributor Compliance Checklist
 
 All participants must:
