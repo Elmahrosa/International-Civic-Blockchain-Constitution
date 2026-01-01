@@ -16,3 +16,12 @@ Thank you for contributing! This project follows an open RFC + PR process.
 
 ## Security
 - Report vulnerabilities to the `SECURITY.md` workflow before creating public PRs that change security-critical code.
+# Code of Conduct
+- Petition-first, badge-gated participation.
+- Respect governance votes and audit trails.
+- Zero tolerance for fraud or malicious proposals.
+
+# Contributing
+- Sign petition; obtain badge.
+- Use `governance/proposal_schema.json` for proposals.
+- Log changes in `audits/transparency_log.md`.
