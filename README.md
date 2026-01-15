@@ -1,3 +1,4 @@
+![CI](https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/actions/workflows/ci.yml/badge.svg)
 # 🌐 International Civic Blockchain Constitution  
 **Part of the TEOS Egypt Sovereign Blockchain Ecosystem**  
 *A mobile‑first, KYC‑secured civic constitution and multichain reference implementation.*
