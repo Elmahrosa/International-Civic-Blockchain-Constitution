@@ -6,28 +6,46 @@ on:
   pull_request:
     branches: ["main"]
 
+permissions:
+  contents: read
+
 jobs:
-  verify:
+  markdown:
+    name: Markdown checks
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # This repo may be docs/json only; CI should still pass.
-      - name: Validate JSON files (if any)
-        run: |
-          set -e
-          shopt -s globstar nullglob
-          files=( **/*.json )
-          if [ ${#files[@]} -eq 0 ]; then
-            echo "No JSON files found — skipping JSON validation."
-            exit 0
-          fi
-          for f in "${files[@]}"; do
-            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" >/dev/null
-            echo "OK: $f"
-          done
+      - name: Lint Markdown (markdownlint)
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: |
+            **/*.md
+            !node_modules/**
 
-      - name: Validate YAML files (basic check)
-        run: |
-          echo "YAML validation skipped (no dependency). CI passed."
+  rust:
+    name: Rust checks
+    runs-on: ubuntu-latest
+    # Only run if Cargo.toml exists
+    if: ${{ hashFiles('Cargo.toml') != '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2
+
+      - name: Format check
+        run: cargo fmt --all -- --check
+
+      - name: Clippy
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
+      - name: Tests
+        run: cargo test --all --all-features
