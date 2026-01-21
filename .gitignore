@@ -2,3 +2,7 @@ node_modules/
 dist/
 .env
 *.log
+
+# Dependencies
+node_modules/
+**/node_modules/
