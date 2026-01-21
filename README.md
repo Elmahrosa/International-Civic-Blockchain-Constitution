@@ -1,5 +1,7 @@
 # 🌍 International Civic Blockchain Constitution
-## Born in Egypt for the World
+## Born in Egypt for the World   
+![CI](https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/actions/workflows/ci.yml/badge.svg?branch=main)
+
 
 This repository contains the **supreme constitutional charter**
 governing the TEOS Sovereign Blockchain Ecosystem.
