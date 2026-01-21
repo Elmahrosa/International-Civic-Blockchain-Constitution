@@ -27,27 +27,44 @@ jobs:
   rust:
     name: Rust checks
     runs-on: ubuntu-latest
-    # Run only if this is a real Rust project (Cargo.toml + src/)
-    if: ${{ hashFiles('Cargo.toml') != '' && hashFiles('src/lib.rs', 'src/main.rs') != '' }}
     steps:
       - uses: actions/checkout@v4
 
+      - name: Detect Rust project
+        id: detect
+        run: |
+          if [ -f "Cargo.toml" ]; then
+            echo "has_cargo=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_cargo=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Stop (no Rust project)
+        if: steps.detect.outputs.has_cargo == 'false'
+        run: echo "No Cargo.toml found — skipping Rust checks."
+
       - name: Install Rust toolchain
+        if: steps.detect.outputs.has_cargo == 'true'
         uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
 
       - name: Cache cargo
+        if: steps.detect.outputs.has_cargo == 'true'
         uses: Swatinem/rust-cache@v2
 
       - name: Build
+        if: steps.detect.outputs.has_cargo == 'true'
         run: cargo build --all-features
 
-      - name: Format check (only if rustfmt config exists)
+      - name: Format check
+        if: steps.detect.outputs.has_cargo == 'true'
         run: cargo fmt --all -- --check
 
-      - name: Clippy (lenient)
+      - name: Clippy
+        if: steps.detect.outputs.has_cargo == 'true'
         run: cargo clippy --all-targets --all-features
 
       - name: Tests
+        if: steps.detect.outputs.has_cargo == 'true'
         run: cargo test --all --all-features
