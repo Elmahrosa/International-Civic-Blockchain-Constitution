@@ -1,10 +1,14 @@
-name: CI (disabled)
+name: CI
 
 on:
-  workflow_dispatch:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
-  noop:
+  ok:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "CI disabled temporarily."
+      - uses: actions/checkout@v4
+      - run: echo "CI OK"
