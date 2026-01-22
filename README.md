@@ -143,6 +143,9 @@ and **not** a community voting document.
 
 ---
 
+📐 Sovereign Architecture:
+See `/docs/sovereign-architecture.md`
+
 **Authority:** Elmahrosa International  
 📧 ayman@teosegypt.com  
 
