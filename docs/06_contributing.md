@@ -1,4 +1,5 @@
 # 🔔 TEOS Contribution Governance Rules
+“Contribution does not imply governance rights or authority.”
 ### Petition-First | Badge-Gated | Validator-Logged
 
 🚨 **Petition-First Enforcement** 🚨  
