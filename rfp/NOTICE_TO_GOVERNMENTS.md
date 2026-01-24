@@ -1,4 +1,89 @@
 # 📜 NOTICE_TO_GOVERNMENTS.md
+<!--
+Canonical Authority Hash (SHA-256)
+df320f9b14598aa867e76e07b00c16b1275630218eb42cee82e89452946ce75e
+Derived from: AUTHORITY.md — TEOS Sovereign Authority Chain
+-->
+
+# NOTICE TO GOVERNMENTS, CENTRAL BANKS & REGULATORY AUTHORITIES
+
+## Binding Constitutional Authority Notice  
+**TEOS / Elmahrosa Sovereign Stack**
+
+This notice formally affirms that all engagements, pilots, deployments, integrations,
+or evaluations involving **TEOS (The Elmahrosa Operating System)** are governed
+exclusively by the **TEOS Sovereign Authority Chain**, as constitutionally defined
+and cryptographically anchored above.
+
+---
+
+## 1. Canonical Authority Supremacy
+
+All TEOS systems operate under a **single, non-negotiable authority hierarchy**:
+
+International Civic Blockchain Constitution  
+→ TEOS-FORGE (Stewardship & Lifecycle Governance)  
+→ TEOS-Governance (Policy & Oversight Authority)  
+→ TEOS-Compliance-Kit (Jurisdictional Enforcement)  
+→ TEOS-AI-Guard (Advisory AI Safety Gates)  
+→ TEOS-AI-Auditor (Audit & Evidence Layer)  
+→ Teos-Sovereign-System (Execution Kernel)  
+→ TEOS-API-Sovereign (Governed External Interfaces)
+
+No authority exists outside this chain.
+
+---
+
+## 2. Legal & Institutional Effect
+
+- **Execution does not create authority**
+- **Automation does not override governance**
+- **AI does not decide**
+- **APIs do not bypass compliance**
+- **All state-changing actions require auditable evidence**
+
+Any system or institution operating outside this framework is
+**non-compliant and unauthorized**.
+
+---
+
+## 3. Constitutional Capacity Governance
+
+TEOS enforces a **hard constitutional ceiling**:
+
+> **No geopolitical region may exceed 25% of total global sovereign access capacity**
+
+This applies across pilots, production systems, funding vehicles,
+and institutional intermediaries — without exception.
+
+---
+
+## 4. Scope of Applicability
+
+This notice applies to:
+
+- National governments  
+- Central banks  
+- Regulators & supervisory authorities  
+- National digital platforms  
+- UN / IFI / SDG-aligned DPI programs  
+
+TEOS is **not** a DAO, **not** a permissionless protocol,
+and **not** a community-voting system.
+
+---
+
+## 5. Acceptance by Engagement
+
+Engagement with TEOS constitutes acknowledgment of this authority,
+its constitutional supremacy, and its enforcement mechanisms.
+
+---
+
+**Issued under Founder-Controlled Constitutional Authority**  
+**Elmahrosa International — TEOS Egypt**
+
+*Born in Egypt. Engineered for Nations. Scaled for the World.*
 
 ## Formal Notice to Governments, Central Banks, and Public Authorities
 
