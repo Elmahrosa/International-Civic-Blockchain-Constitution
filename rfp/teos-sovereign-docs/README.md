@@ -1,72 +1,44 @@
 # 🚀 TEOS Sovereign RFP Kit  
 ## 🌐 International Civic Blockchain Constitution (ICBC)
 
-**Governing Authority:** International Civic Blockchain Constitution  
-**License:** TESL — Sovereign Usage Rights  
-**Verification:** SHA256[AUTHORITY.md]  
-**Status:** PRODUCTION | Jan 24, 2026  
-
 ![Status](https://img.shields.io/badge/Status-PRODUCTION-success)
 ![Governance](https://img.shields.io/badge/Governance-Constitutional-blue)
 ![License](https://img.shields.io/badge/License-TESL-red)
 ![Access](https://img.shields.io/badge/Access-Sovereign_Only-black)
-![Region](https://img.shields.io/badge/Region-MENA_%26_Africa-gold)
 ![Capacity](https://img.shields.io/badge/Regional_Cap-25%25-orange)
 
 ---
 
 ## 🏛 Official Sovereign RFP Directory
 
-This repository serves as the **Canonical Gateway** for sovereign and institutional engagement with the **TEOS Sovereign Stack**.
+This repository serves as the **Canonical Gateway** for:
 
-It is intended exclusively for:
 - National Governments  
 - Central Banks  
 - Sovereign Authorities  
-- United Nations agencies  
 - International Financial Institutions (IFIs)
 
 All documents contained herein are governed **exclusively** by the  
 **International Civic Blockchain Constitution (ICBC)**  
 and the **Teos Ethical Sovereign License (TESL)**.
 
-> **No document, codebase, or communication outside this directory carries constitutional authority.**
+> **No document outside this directory carries constitutional authority.**
 
 ---
 
 ## 🧭 Mandatory Sovereign Onboarding Path
 
-### 1️⃣ Preliminary Access Inquiry (PAI) — Verification Gate  
+**Step 1 — Preliminary Access Inquiry (PAI)**  
 🔗 https://portal.teosegypt.com  
 
-Institutional identity, authority level, and constitutional acknowledgment are verified prior to access.
-
----
-
-### 2️⃣ Strategic Alignment — UN SDG & DPI Review  
+**Step 2 — Strategic Alignment Review**  
 📄 `UN_SDG_IMPLEMENTATION.md`  
 
-Demonstrates alignment with:
-- **SDG 16.9** — Legal Identity  
-- **SDG 17.17** — Effective Partnerships  
-- GovStack / Digital Public Infrastructure principles
-
----
-
-### 3️⃣ Technical Readiness — 90-Day Pilot Execution Roadmap  
+**Step 3 — Technical Review**  
 📄 `PILOT_TECHNICAL_ROADMAP_90_DAYS.md`  
 
-Defines National Adapter Layer (NAL) activation, audit readiness, and pilot scope.
-
----
-
-### 4️⃣ Sovereign Activation — Risk Acceptance & Formal Sign-Off  
+**Step 4 — Activation & Sign-Off**  
 📄 `PILOT_RISK_ACCEPTANCE_LETTER.md`  
-
-Formal acknowledgment of:
-- Constitutional governance  
-- National data sovereignty  
-- Pilot risk boundaries  
 
 > ⚠️ **Completion of document review is mandatory prior to any executive or technical briefing.**
 
@@ -81,6 +53,7 @@ Formal acknowledgment of:
 | **UN_SDG_IMPLEMENTATION.md** | SDGs 16.9 & 17.17 alignment | UN Delegates, Grant Officers |
 | **PILOT_TECHNICAL_ROADMAP_90_DAYS.md** | National Adapter Layer (NAL) activation | Technical Leads, Program Managers |
 | **UN_IFI_QA.md** | Institutional legal & audit responses | IFIs, Compliance Bodies |
+| **NOTICE_TO_GOVERNMENTS.md** | Procurement & legal clarification | Procurement Offices, Legal Teams |
 
 ---
 
@@ -94,44 +67,50 @@ Formal acknowledgment of:
    No IP transfer, no equity rights, no token dependency.
 
 3. **Geopolitical Capacity Control**  
-   Regional participation is capped at **25% of total global access capacity**  
-   to preserve multipolar, non-aligned balance and prevent bloc capture.
+   Regional participation is capped at **25%**  
+   to preserve multipolar and non-aligned balance.
 
 ---
 
-## 🌍 Global Capacity & Funding Profile (Indicative)
+## 🌍 Global Capacity & Regional Status
 
-### 🌐 Regional Status
-
-- **MENA:** OPEN (Priority)  
-- **Africa:** OPEN (High Priority)  
+### ✅ OPEN REGIONS
+- **MENA:** OPEN *(Priority)*  
+- **Africa:** OPEN *(High Priority)*  
 - **LATAM:** OPEN  
+
+### ⚠️ LIMITED REGIONS
+- **Europe:** LIMITED *(Regulatory alignment required)*  
+- **North America (USA & Canada):** LIMITED *(Sovereign pilot only)*  
 - **East Asia:** LIMITED  
 
-### 💰 Funding Eligibility (Non-Binding)
+> Regional limitations reflect regulatory complexity and sovereignty-first sequencing — not exclusion.
 
-| Phase | Indicative Range | Duration |
-|-----|-----------------|----------|
+---
+
+## 💰 Funding Profile (Indicative, Non-Binding)
+
+| Phase | Allocation | Duration |
+|-----|-----------|----------|
 | **Pilot Phase** | $1.5M – $3.0M | 6 Months |
 | **Scale Phase** | $5.0M – $15.0M | 18 Months |
 
-These ranges are **indicative only** and subject to:
-- National procurement law  
-- UN / IFI funding mechanisms  
-- Separate legal and financial instruments  
-
-Funding does **not** alter governance, authority, or constitutional control.
+✅ Compatible with:
+- UNDP  
+- World Bank (IDA)  
+- Multilateral & Bilateral Digital Public Infrastructure Funds  
 
 ---
 
 ## 🔗 Verification & Integrity Layer
 
-- **Authority Chain**  
+- **Governing Authority:** International Civic Blockchain Constitution  
+- **License:** TESL — Sovereign Usage Rights  
+- **Verification:** SHA-256 hash anchored in `AUTHORITY.md`  
+- **Authority Chain:**  
   `ICBC → TEOS-FORGE → TEOS-Governance → TEOS-Sovereign-System`
 
-- **Tamper Evidence**  
-  All core documents reference the **SHA-256 hash of `AUTHORITY.md`**  
-  to ensure immutable constitutional alignment.
+*Hash values are published at time of constitutional ratification.*
 
 ---
 
@@ -139,13 +118,13 @@ Funding does **not** alter governance, authority, or constitutional control.
 
 This repository does **not** constitute:
 - A commercial product offering  
-- An equity or token solicitation  
+- An equity, token, or investment solicitation  
 - A public blockchain deployment  
 
 All engagements are subject to:
 - Constitutional authority  
 - TESL governance  
-- Formal sovereign and IFI procurement procedures  
+- Formal sovereign procurement and approval procedures  
 
 ---
 
