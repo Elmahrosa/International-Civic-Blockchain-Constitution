@@ -1,79 +1,122 @@
 # 🔗 TEOS Sovereign Authority Chain
+## Canonical Authority & Execution Hierarchy
 
 This document defines the **non-negotiable authority and execution hierarchy**
-of the TEOS / Elmahrosa Sovereign Stack.
+governing the **TEOS / Elmahrosa Sovereign Stack**.
 
-It is governed by the
-**International Civic Blockchain Constitution** and applies to
-all repositories, systems, APIs, AI modules, and deployments.
+It applies to **all repositories, systems, APIs, AI modules, integrations, and deployments**
+without exception.
+
+This hierarchy is governed exclusively by the
+**International Civic Blockchain Constitution** and enforced under the **TESL** license.
 
 ---
 
 ## 🏛️ Canonical Authority Flow
 
-No system may operate outside the following chain:
+No system, component, or actor may operate outside the following authority chain:
 
 ```
 
 International Civic Blockchain Constitution
 ↓
-TEOS-FORGE (Stewardship & Lifecycle Governance)
+TEOS-FORGE
+(Stewardship & Lifecycle Governance)
 ↓
-TEOS-Governance (Policy & Decision Authority)
+TEOS-Governance
+(Policy, Oversight & Decision Authority)
 ↓
-TEOS-Egypt-Compliance-Kit (Jurisdiction & Regulatory Enforcement)
+TEOS-Compliance-Kit
+(Jurisdictional & Regulatory Enforcement)
 ↓
-TEOS-AI-Guard (AI Safety Gates – Decision Support Only)
+TEOS-AI-Guard
+(AI Safety Gates — Decision Support Only)
 ↓
-TEOS-AI-Auditor (Evidence, Logging & Audit Export)
+TEOS-AI-Auditor
+(Evidence Generation, Logging & Audit Export)
 ↓
-Teos-Sovereign-System (Sovereign Execution Kernel)
+Teos-Sovereign-System
+(Sovereign Execution Kernel)
 ↓
-TEOS-API-Sovereign (Governed API & SDK Gateway)
+TEOS-API-Sovereign
+(Governed API & SDK Gateway)
 ↓
-External Applications, Partners & Nations
+External Applications, Institutions, Nations & Partners
 
 ```
 
+Any deviation, bypass, or reordering of this chain is **strictly prohibited**.
+
 ---
 
-## ⚖️ Authority Rules
+## ⚖️ Authority Enforcement Rules
+
+The following rules are absolute and non-negotiable:
 
 - Authority **always flows downward**
 - Execution **never creates authority**
-- AI **never decides**
-- APIs **never bypass governance**
-- Compliance **must pass before execution**
-- Audit evidence **must exist for every action**
+- Governance **precedes automation**
+- Compliance **must be validated before execution**
+- AI **never decides**; it supports human authority only
+- APIs **may not bypass governance or compliance layers**
+- Audit evidence **must exist for every state-changing action**
 
-Any system attempting to bypass or reorder this chain
-is considered **non-compliant and unauthorized**.
+Any system or integration violating these rules is considered
+**non-compliant, unauthorized, and invalid**.
 
 ---
 
-## 🌍 Sovereign Scope
+## 🛡️ AI & Automation Constraints
 
-This authority chain is designed for:
-- Governments
+- AI components are **advisory only**
+- No AI model may:
+  - Issue binding decisions
+  - Override governance rules
+  - Execute actions without human authorization
+- All AI activity must be:
+  - Logged
+  - Auditable
+  - Traceable to an accountable authority
+
+There is **no autonomous governance** within the TEOS Sovereign Stack.
+
+---
+
+## 🌍 Sovereign Scope of Application
+
+This authority model is explicitly designed for:
+
+- National governments
 - Central banks
-- Regulators
+- Regulatory authorities
 - National digital platforms
-- UN / SDG-aligned programs
+- UN / SDG-aligned Digital Public Infrastructure (DPI) programs
 
-It is **not a DAO model** and **not community governance**.
+This is **not**:
+- A DAO governance model
+- A community-voting system
+- A permissionless protocol
+
+Sovereignty is institutional, constitutional, and state-aligned by design.
 
 ---
 
 ## 📜 Canonical References
 
-- Constitution (Single Source of Truth):  
+- **Constitution (Single Source of Truth)**  
   https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution
 
-- License Authority (TESL):  
+- **License Authority (TESL)**  
   https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/LICENSE
 
-- Stewardship Anchor:  
+- **Stewardship & Governance Anchor (TEOS-FORGE)**  
   https://github.com/Elmahrosa/TEOS-FORGE
 
-**Elmahrosa International — TEOS Egypt**  
+---
+
+**Certified under Founder-Controlled Constitutional Authority**  
+**Elmahrosa International — TEOS Egypt**
+
 *Born in Egypt. Engineered for Nations. Scaled for the World.*
+```
+
