@@ -1,12 +1,12 @@
-# ⚖️ TEOS Egypt Sovereign License (TESL)
+# ⚖️ Teos Ethical Sovereign License (TESL)
 
 **This file is the sole canonical and authoritative source  
-of the TEOS Egypt Sovereign License (TESL).**
+of the Teos Ethical Sovereign License (TESL).**
 
 Copyright © 2025–2026 Elmahrosa International  
 All Rights Reserved.
 
-**Status:** Proprietary · Source-Available · Sovereign-Governed
+**Status:** Proprietary · Source-Available · Sovereign-Governed · Ethical-First
 
 ---
 
@@ -14,154 +14,186 @@ All Rights Reserved.
 
 This license (“**TESL**”) governs **all software, smart contracts, AI systems,
 documentation, specifications, data models, governance logic, SDKs,
-APIs, and infrastructure** published under **TEOS Egypt** and
+APIs, and infrastructure** published under **TEOS** and
 **Elmahrosa International** repositories.
 
 This includes, but is not limited to:
 
-- International-Civic-Blockchain-Constitution (this repository)
+- International-Civic-Blockchain-Constitution
 - TEOS-FORGE
 - TEOS-Governance
 - Teos-Sovereign-System
-- TEOS-Egypt-Compliance-Kit
+- TEOS-Compliance-Kit
 - TEOS-AI-Guard
 - TEOS-AI-Auditor
 - TEOS-Identity-Insight-AI
 - TEOS-API-Sovereign (including SDKs)
-- TEOS-Egypt-Civic-First-Blockchain-Ecosystem
-- Any forks, modules, extensions, SDKs, or derivatives thereof
+- TEOS-Civic-First-Blockchain-Ecosystem
+- Any forks, modules, extensions, or derivatives thereof
 
-This software exists to support **civic-first digital infrastructure
-and sovereign governance**, not unrestricted commercial exploitation.
+TESL exists to support **civic-first, constitutionally governed,
+sovereign digital infrastructure**, prioritizing public interest,
+human rights, and ethical governance over unrestricted commercial use.
 
 ---
 
 ## 2. Founder & Sovereign Authority
 
-All rights to **use, modify, deploy, commercialize, sublicense, certify,
-and monetize** the software are reserved **exclusively** to:
+All rights to **use, deploy, modify, commercialize, sublicense,
+certify, or monetize** the software are reserved **exclusively** to:
 
 **Ayman Seif — Elmahrosa International**
 
-No ownership, patent, trademark, or governance rights
-are transferred under this license.
+No ownership, patent, trademark, governance, or derivative authority
+is transferred under this license.
 
-All governance logic, AI behavior, and protocol execution
-remain **human-final and founder-anchored**.
+All protocol governance, AI behavior, compliance enforcement,
+and execution logic remain **human-final and founder-anchored**.
+
+This authority is **non-delegable** unless explicitly granted
+in a written sovereign instrument.
 
 ---
 
-## 3. Permitted Non-Commercial Use
+## 3. Permitted Evaluation Use (Non-Commercial)
 
 Non-Founder parties are granted a **limited, revocable,
-non-exclusive, non-transferable, non-commercial** right to:
+non-exclusive, non-transferable, non-commercial**
+right to:
 
 - View and review the source code
-- Fork repositories for **education, research, testing, or evaluation**
-- Submit issues or pull requests for review
+- Fork repositories strictly for **education, research,
+  internal testing, or technical evaluation**
+- Submit issues or pull requests for review consideration
 
-This grant **does not permit**:
+This grant **explicitly excludes**:
+
 - production deployment
 - public hosting
-- monetization
+- operational use
 - institutional or governmental use
+- regulatory or critical infrastructure use
 
 ---
 
-## 4. Prohibited Uses (Without Written Permission)
+## 4. Prohibited Uses (Without Written Sovereign License)
 
-You may **NOT**, without explicit written authorization:
+You may **NOT**, without explicit written authorization
+from Elmahrosa International:
 
-- Use the software for **commercial, institutional, governmental,
-  or revenue-generating** purposes
-- Deploy in **production**, public, regulated, or critical environments
-- Offer the software or derivatives as **SaaS, API, platform, or service**
+- Use the software for **commercial, institutional,
+  governmental, or revenue-generating purposes**
+- Deploy in **production**, regulated, or public environments
+- Offer the software or derivatives as **SaaS, API,
+  platform, or managed service**
 - Resell, sublicense, white-label, or rebrand
-- Use for fundraising, token sales, staking programs,
+- Use for fundraising, token issuance, staking,
   or financial products
-- Represent endorsement by TEOS Egypt or Elmahrosa International
-- Remove, modify, or obscure license, governance, or attribution notices
-- Circumvent embedded compliance, identity, audit, or governance controls
+- Claim endorsement by TEOS or Elmahrosa International
+- Remove, alter, or obscure license, authority,
+  governance, or ethical notices
+- Circumvent compliance, audit, identity,
+  governance, or ethical safeguards
 
 ---
 
-## 5. Tokens & Digital Assets Disclaimer
+## 5. Sovereign & Institutional Use
 
-Any reference to tokens, points, governance units, rewards, or staking:
+Any **governmental, intergovernmental, or institutional**
+use of TEOS requires:
 
-- Is **experimental** and **non-investment** in nature
-- Does **NOT** constitute an offer, solicitation, or promise of profit
-- May be restricted or regulated by jurisdiction
+- Formal sovereign engagement
+- Explicit written authorization
+- A binding legal instrument (MoU, Pilot Agreement,
+  or Sovereign License)
 
-All legal and regulatory compliance responsibility
-rests entirely with the user.
+No implied rights are granted through
+documentation access, evaluation, or funding references.
 
 ---
 
-## 6. AI & Governance Disclaimer
+## 6. Tokens & Digital Assets Disclaimer
 
-AI systems provided under TEOS Egypt:
+Any reference to tokens, points, governance units,
+rewards, or staking:
 
-- Are **decision-support tools only**
-- May produce incomplete or incorrect output
+- Is **experimental and non-investment**
+- Does **not** constitute an offer or solicitation
+- Does **not** represent equity or profit rights
+
+Regulatory compliance remains the sole responsibility
+of the deploying sovereign authority.
+
+---
+
+## 7. AI & Governance Disclaimer
+
+AI systems under TEOS:
+
+- Operate as **decision-support tools only**
 - Do **not** replace legal, human, or institutional authority
+- May generate incomplete or incorrect outputs
 
 **Final authority always resides with  
 Ayman Seif / Elmahrosa International.**
 
 ---
 
-## 7. Compliance Responsibility
+## 8. Compliance & Ethical Responsibility
 
-You are solely responsible for:
+Any permitted use must comply with:
 
-- Legal and regulatory compliance
-- Ethical and lawful use
-- Data protection, privacy, and consent
-- Security of any internal evaluation or testing environment
+- Applicable law and regulation
+- Data protection and privacy requirements
+- Human rights and ethical standards
+- Civic-first principles
+
+Violation of ethical or constitutional principles
+constitutes license breach.
 
 ---
 
-## 8. Termination
+## 9. Termination
 
-Any violation of this license results in **immediate termination**
+Any violation of this license results in
+**immediate and automatic termination**
 of all granted rights.
 
 Upon termination, you must immediately:
 
-- Cease all use of the software
-- Destroy all copies in your possession
+- Cease all use
+- Destroy all copies
 - Halt all derivative activity
 
 ---
 
-## 9. No Warranty
+## 10. No Warranty
 
 THE SOFTWARE IS PROVIDED **“AS IS”**,  
-WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+WITHOUT WARRANTY OF ANY KIND.
 
 ---
 
-## 10. Limitation of Liability
+## 11. Limitation of Liability
 
 TO THE MAXIMUM EXTENT PERMITTED BY LAW,  
 **ELMAHROSA INTERNATIONAL SHALL NOT BE LIABLE**
-for any damages arising from use or misuse of this software.
+for any damages arising from use or misuse.
 
 ---
 
-## 11. Governing Law
+## 12. Governing Law & Jurisdiction
 
 This license is governed by the laws of the  
 **Arab Republic of Egypt**.
 
-Exclusive jurisdiction and venue: **Cairo, Egypt**.
+Exclusive jurisdiction: **Cairo, Egypt**.
 
 ---
 
-## 12. Contact
+## 13. Contact & Sovereign Licensing
 
-Commercial, institutional, or governmental licensing
+All commercial, institutional, or governmental use
 requires **explicit written approval**:
 
 **Ayman Seif — Elmahrosa International**  
@@ -169,8 +201,5 @@ requires **explicit written approval**:
 
 ---
 
-⚠️ **Founder-only production & monetization**
-
-All production deployment, commercialization,
-and institutional use are strictly prohibited
-unless explicitly licensed in writing.
+⚠️ **Founder-only production & monetization**  
+⚖️ **Ethical, civic-first use only**
