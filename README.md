@@ -79,7 +79,7 @@ All TEOS systems **must comply** with the following hierarchy:
 10. **Execution Layers** — services, apps, national deployments
 
 Any system operating outside this chain is **non-compliant and unauthorized**.
-
+This hierarchy is binding across all jurisdictions and overrides any conflicting technical or community governance claims.
 ---
 
 ## ⚖️ Canonical License Authority (TESL)
