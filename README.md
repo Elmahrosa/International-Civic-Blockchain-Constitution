@@ -4,10 +4,14 @@
 <div align="center">
 
 ![CI](https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/actions/workflows/ci.yml/badge.svg?branch=main)
+
 ![TEOS Sovereign Standing](https://img.shields.io/badge/Standing-Sovereign%20Original%20—%20Elmahrosa%20International-blue?style=for-the-badge)
+
 ![License](https://img.shields.io/badge/License-TESL%20Canonical-red?style=for-the-badge)
 
 </div>
+
+👉 See the official ecosystem index: [ECOSYSTEM.md](./ECOSYSTEM.md)
 
 ---
 
