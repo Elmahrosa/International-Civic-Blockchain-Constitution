@@ -1,4 +1,15 @@
 # PAIRegistry — On-Chain Receipt Anchoring Contract (Platform-Neutral)
+# PAIRegistry — PAI Receipt Anchoring Contract (Normative Reference)
+
+## Constitutional Binding
+This contract specification is constitutionally binding under:
+- [`CONSTITUTION.md`](../CONSTITUTION.md) — Article IX (Cryptographic Enforcement)
+- [`06_PAI_RECEIPT_SPEC.md`](../06_PAI_RECEIPT_SPEC.md) — Right to Engage
+- [`docs/09_AUTHORIZATION_STAMP_SPEC.md`](../docs/09_AUTHORIZATION_STAMP_SPEC.md) — Right to Execute
+
+## Purpose
+Anchor a **PAI Submission Receipt** on-chain by emitting an immutable event containing:
+receipt hash, keys, signatures, chain timestamp, and off-chain pointer.
 
 ## Purpose
 Anchor a **PAI Submission Receipt** on-chain by emitting an immutable event that includes:
