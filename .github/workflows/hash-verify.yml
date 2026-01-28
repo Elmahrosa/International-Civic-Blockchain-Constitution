@@ -12,16 +12,20 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # 1) Ministerial PDF pin (PAI Executive)
       - name: Verify ministerial PDF hash (PAI Executive)
         run: |
           echo "78db533877c9b71aaad5539658cbd0dba8211a3d58ecbcf47dbdd00db92c18e0  ministerial/PAI_Receipt_Spec_Executive.pdf" | sha256sum -c -
 
-      - name: Verify PAI Receipt Spec Hash
+      # 2) Canonical PAI Receipt Spec pin
+      - name: Verify PAI Receipt Spec hash (06_PAI_RECEIPT_SPEC.md)
         run: |
+          set -euo pipefail
           echo "Verifying 06_PAI_RECEIPT_SPEC.md integrity..."
 
           EXPECTED_HASH="571592d856dcc51999b3a766eb4ce1992c7921890376b9b963fce43bca13449e"
-          ACTUAL_HASH=$(sha256sum 06_PAI_RECEIPT_SPEC.md | awk '{print $1}')
+          ACTUAL_HASH="$(sha256sum 06_PAI_RECEIPT_SPEC.md | awk '{print $1}')"
 
           if [ "$EXPECTED_HASH" != "$ACTUAL_HASH" ]; then
             echo "❌ Hash mismatch detected!"
@@ -31,6 +35,3 @@ jobs:
           fi
 
           echo "✅ Hash verified successfully."
-      - name: Verify ministerial PDF hash
-        run: |
-          echo "<PASTE_HASH_HERE>  ministerial/PAI_Receipt_Spec_Executive.pdf" | sha256sum -c -
