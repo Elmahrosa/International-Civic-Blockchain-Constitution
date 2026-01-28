@@ -22,6 +22,13 @@
   </p>
 </div>
 
+# 🇪🇬 *Execution kernel born in Egypt — enforceable by nations worldwide.*
+
+**Governance before execution.  
+Audit before action.  
+Accountability before scale.**
+
+
 # 🧱 Teos-Sovereign-System
 
 **Sovereign Execution Kernel for Governed Digital Public Infrastructure**  
