@@ -2,3 +2,7 @@ PAI_Receipt_Spec_Executive.pdf
 Algorithm: SHA-256
 Hash: <PASTE_HASH_HERE>
 
+
+PAI_Receipt_Spec_Executive.pdf
+Algorithm: SHA-256
+Hash: <PASTE_HASH_HERE>
