@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Verify ministerial PDF hash (PAI Executive)
+        run: |
+          echo "78db533877c9b71aaad5539658cbd0dba8211a3d58ecbcf47dbdd00db92c18e0  ministerial/PAI_Receipt_Spec_Executive.pdf" | sha256sum -c -
 
       - name: Verify PAI Receipt Spec Hash
         run: |
