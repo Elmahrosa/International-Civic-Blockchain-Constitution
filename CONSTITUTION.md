@@ -1,11 +1,11 @@
 # 🌍 TEOS Civic Blockchain Constitution  
-## Born in Egypt for the World  
-### Built in Egypt. Engineered for Nations. Scaled for the World.
+## Born in Egypt — Engineered for Nations — Scaled for the World
 
 **Version:** 1.0  
 **Ratified:** 2025-12-31  
 **Status:** Supreme Governance Charter  
-**Authority:** Elmahrosa International  
+**Coordinating Authority:** Elmahrosa International  
+**Governing Law & Venue:** Cairo, Arab Republic of Egypt  
 
 ---
 
@@ -13,17 +13,18 @@
 
 We, the stakeholders of the TEOS ecosystem — citizens, public servants, civic institutions,
 technical custodians, and adopting jurisdictions — establish this Constitution as the
-supreme charter governing civic-first blockchain infrastructure.
+supreme charter governing **civic-first blockchain infrastructure**.
 
-TEOS is born in Egypt, *Om el Donia (Mother of the World)*, a historical origin of law,
+TEOS is born in Egypt, *Om El Donia (Mother of the World)* — a historic origin of law,
 administration, and public order.  
-This Constitution transforms Egyptian civic principles into exportable,
-nation-ready **Digital Public Infrastructure (DPI)**.
+This Constitution transforms Egyptian civic governance principles into
+**exportable, nation-ready Digital Public Infrastructure (DPI)**.
 
 This document is the **highest authority** governing all TEOS protocols, registries,
-validators, institutions, contributors, and deployments.
+validators, institutions, contributors, deployments, and integrations.
 
-No technical system, smart contract, vote, or automation may supersede this Constitution.
+No technical system, smart contract, vote, automation, or AI process may supersede
+this Constitution.
 
 ---
 
@@ -33,14 +34,14 @@ No technical system, smart contract, vote, or automation may supersede this Cons
 2. Human governance precedes automation.
 3. Civic legitimacy precedes economic activity.
 4. Transparency, auditability, and accountability are mandatory.
-5. Constitutional alignment is required before any protocol execution.
-6. AI systems may assist analysis but may not govern, decide, or override human authority.
+5. Constitutional alignment is required **before** any execution.
+6. AI systems may assist analysis but **may not govern, decide, or override** human authority.
 
 ---
 
 ## 🎯 Purpose & Scope
 
-This Constitution provides a modular legal and operational charter for:
+This Constitution provides a **modular legal and operational charter** for implementing:
 
 - Civic asset registries
 - Public governance and participation
@@ -49,6 +50,7 @@ This Constitution provides a modular legal and operational charter for:
 - Interoperable digital public infrastructure
 
 ### Covered Public-Interest Domains
+
 - Land and real estate
 - Public infrastructure
 - Cultural heritage
@@ -64,23 +66,23 @@ This Constitution provides a modular legal and operational charter for:
 ### 👤 Citizens
 Verified badge-holding citizens may:
 - Submit governance proposals
-- Review motions and audits
+- Review public audits and records
 - Endorse constitutional amendments
 
 ### 🧩 Validators
-Validators are constitutional custodians, not owners.  
+Validators are **constitutional custodians**, not owners.  
 They are bound to:
 - Secure network operations
-- Enforce governance rules
+- Enforce constitutional rules
 - Reject unconstitutional actions
 - Maintain immutable governance logs
 
 ### ⚖ Constitutional Council (CC)
-The Constitutional Council is the supreme interpretive authority and may:
+The Constitutional Council is the **supreme interpretive authority** and may:
 - Confirm constitutional alignment
 - Approve or reject proposal admissibility
 - Suspend or nullify unconstitutional actions
-- Trigger audits or enforcement actions
+- Trigger audits and enforcement measures
 
 ---
 
@@ -91,23 +93,24 @@ No proposal may bypass any stage.
 1. Submission by a verified Citizen
 2. Technical and security audit
 3. Civic review period
-4. Validator vote (⅔ supermajority required)
-5. Immutable logging prior to execution
+4. Validator vote (**⅔ supermajority required**)
+5. Immutable logging **prior to execution**
 
-Execution without logging is void.
+Execution without logging is **constitutionally void**.
 
 ---
 
 ## 💰 Treasury Sovereignty Rules
 
-All treasury actions must be:
+All treasury actions MUST be:
 - Publicly declared
 - Dual-verified
 - Council-reviewed
 - Validator-affirmed
 - Immutably logged
 
-Opacity, unilateral control, or undisclosed flows are constitutionally forbidden.
+Opacity, unilateral control, or undisclosed value flows are
+**constitutionally forbidden**.
 
 ---
 
@@ -140,8 +143,7 @@ No retroactive amendments are permitted.
 
 ## 🛑 Emergency & Failsafe Provisions
 
-An emergency pause may be invoked only by a documented multisignature
-including:
+An emergency pause may be invoked **only** through documented multisignature approval including:
 - Constitutional Council
 - Technical Custodians
 - Governance Lead
@@ -149,7 +151,9 @@ including:
 All emergency actions require:
 - Written justification
 - Public disclosure
-- Mandatory review within 14 days
+- Mandatory review within **14 days**
+
+Emergency powers **do not** override constitutional supremacy.
 
 ---
 
@@ -158,10 +162,9 @@ All emergency actions require:
 - **Coordinating Authority:** Elmahrosa International  
 - **Governing Law & Venue:** Cairo, Arab Republic of Egypt  
 - **License:** TEOS Egypt Sovereign License (TESL)  
-- **Copyright:** © 2025 Elmahrosa International  
 
-This Constitution is adoptable by other jurisdictions through local legal
-mapping while preserving constitutional supremacy.
+This Constitution is adoptable by other jurisdictions through local legal mapping
+while preserving constitutional supremacy.
 
 ---
 
@@ -175,8 +178,8 @@ A two-stage model applies:
 
 ## 📖 Glossary
 
-- **Anchor:** Cryptographic reference (hash, tx ID, merkle root) to an off-chain canonical record  
-- **Controller:** Authorized wallet or multisig managing registry metadata  
+- **Anchor:** Cryptographic reference (hash, tx ID, Merkle root) to an off-chain canonical record  
+- **Controller:** Authorized wallet or multisignature managing registry metadata  
 - **Adopter:** Jurisdiction or institution formally adopting this Constitution  
 
 ---
@@ -192,3 +195,33 @@ Signed under one sovereign charter.
 
 **Born in Egypt — For the World.** 🌍  
 **Elmahrosa International**
+
+---
+
+## Article IX — Cryptographic Enforcement of Authority
+
+1. All executable actions within TEOS Sovereign Systems **MUST** be authorized through a
+   cryptographic **Authorization Stamp**.
+
+2. The Authorization Stamp is the **exclusive and admissible proof** that an action has:
+   a. Traversed the Sovereign Authority Chain  
+   b. Received explicit human institutional approval  
+   c. Passed mandatory governance and safety controls  
+
+3. Any execution lacking a valid Authorization Stamp is
+   **constitutionally null and void**, regardless of technical feasibility,
+   emergency context, or majority approval.
+
+4. Execution engines, APIs, smart contracts, and AI systems are
+   **constitutionally prohibited** from:
+   a. Generating authority  
+   b. Self-authorizing actions  
+   c. Executing actions without stamp verification  
+
+5. The cryptographic specification governing Authorization Stamps is defined in:
+   - [`docs/09_AUTHORIZATION_STAMP_SPEC.md`](docs/09_AUTHORIZATION_STAMP_SPEC.md)
+
+6. This Article is **LOCKED** and may not be amended except through the formal
+   ICBC constitutional amendment process.
+
+---
