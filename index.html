@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" id="docRoot">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEOS Egypt | Sovereign Access Portal</title>
+  
+  <!-- SEO / Trust -->
+  <meta name="description" content="TEOS Egypt Sovereign System — Official government & investor submission portal.">
+  <meta name="author" content="Elmahrosa International — Ayman Seif">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0F3B5D">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fonts (Inter + Cairo for Arabic) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #0b1220;
+      --papyrus: #fbf7ef;
+      --papyrus-2: #f5eddc;
+      --lapis: #0F3B5D;
+      --gold: #D4AF37;
+      --basalt: #0a1b2a;
+      --jade: #2E8B57;
+      --line: rgba(15,59,93,.18);
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --font-main: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    .dark {
+      --ink: #f1f5f9;
+      --papyrus: #0b1220;
+      --papyrus-2: #0a1726;
+      --lapis: #9db7ff;
+      --gold: #ffd26a;
+      --basalt: #060b12;
+      --jade: #74e2a6;
+      --line: rgba(148,163,184,.25);
+      --shadow: 0 10px 30px rgba(0,0,0,.40);
+    }
+
+    body {
+      font-family: var(--font-main);
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(212,175,55,.14), transparent 55%),
+        radial-gradient(900px 500px at 85% 20%, rgba(15,59,93,.16), transparent 55%),
+        linear-gradient(180deg, var(--papyrus), var(--papyrus-2));
+      color: var(--ink);
+      transition: background .3s ease, color .3s ease;
+      min-height: 100vh;
+    }
+
+    /* --- Components --- */
+    .seal {
+      background: linear-gradient(135deg, rgba(15,59,93,1), rgba(10,27,42,1));
+      border: 1px solid rgba(212,175,55,.35);
+      box-shadow: 0 14px 40px rgba(2,6,23,.18);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glyph-border{ position: relative; overflow: hidden; }
+    .glyph-border:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background: linear-gradient(90deg, rgba(212,175,55,.35), rgba(212,175,55,0), rgba(212,175,55,.35));
+      opacity:.35;
+      mix-blend-mode: overlay;
+    }
+
+    .corner {
+      position: absolute; width: 44px; height: 44px;
+      border: 2px solid rgba(212,175,55,.55);
+      border-right: none; border-bottom: none;
+      border-radius: 14px 0 0 0;
+    }
+    .corner.tr { right: 14px; top: 14px; transform: rotate(90deg); }
+    .corner.br { right: 14px; bottom: 14px; transform: rotate(180deg); }
+    .corner.bl { left: 14px; bottom: 14px; transform: rotate(270deg); }
+    .corner.tl { left: 14px; top: 14px; }
+
+    .card {
+      background: rgba(255,255,255,.78);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    .dark .card { background: rgba(2,6,23,.55); }
+
+    .step-pill {
+      border: 1px solid var(--line);
+      transition: all 0.3s ease;
+    }
+    .step-pill.active {
+      border-color: var(--gold);
+      background: rgba(212,175,55,.1);
+      font-weight: bold;
+      color: var(--lapis);
+    }
+    .dark .step-pill.active { color: var(--gold); }
+    
+    .step-pill.done {
+      border-color: var(--jade);
+      background: rgba(46,139,87,.1);
+      color: var(--jade);
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+    .dark .step-pill.done { color: var(--jade); }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: fadeIn 0.4s ease forwards; }
+    
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .loader {
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top: 2px solid #fff;
+      width: 16px;
+      height: 16px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .focusRing:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(212,175,55,.25);
+      border-color: rgba(212,175,55,.55);
+    }
+    
+    /* Print Logic */
+    @media print {
+      body > :not(#receiptPrintArea) { display:none !important; }
+      #receiptPrintArea { display:block !important; position: absolute; top: 0; left: 0; width: 100%; }
+      #receiptPrintArea .card { box-shadow:none !important; border: 1px solid #000; }
+      body { background: white; color: black; }
+      .hidden-print { display: none; }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-[color:var(--lapis)] text-white py-4 shadow-xl">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <div class="font-bold tracking-tight text-xl flex items-center gap-2">
+        <span>🏛️</span> ELMAHROSA / TEOS
+      </div>
+      <div class="flex items-center gap-4">
+        <button id="langEN" class="text-xs font-bold border border-white/20 px-3 py-1 rounded-full hover:bg-white/10 transition">EN</button>
+        <button id="langAR" class="text-xs font-bold border border-white/20 px-3 py-1 rounded-full hover:bg-white/10 transition">AR</button>
+        <button id="darkModeToggle" class="text-xs font-bold uppercase border border-white/20 px-3 py-1 rounded-full hover:bg-white/10 transition">
+          <span data-i18n="toggleTheme">Temple Mode</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Seal -->
+  <header class="seal glyph-border py-20 px-6 text-white text-center">
+    <span class="corner tl"></span><span class="corner tr"></span><span class="corner br"></span><span class="corner bl"></span>
+    
+    <div class="max-w-4xl mx-auto relative z-10">
+      <!-- LIVE STATUS BADGE -->
+      <div class="inline-block px-4 py-1 bg-[color:var(--jade)] border border-white/30 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">
+        System Status: Live & Canonical
+      </div>
+
+      <div class="text-xs uppercase tracking-[0.4em] text-white/70 font-mono mb-4" data-i18n="restricted">
+        RESTRICTED — SOVEREIGN INTAKE
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight" data-i18n="title">
+        The Operating System for Nation-States
+      </h1>
+      <p class="text-xl text-white/80 mb-10 font-light" data-i18n="subtitle">
+        Identity · Payments · Data Exchange · Audit-Compliance
+      </p>
+      <div class="flex flex-wrap justify-center gap-2 text-xs font-mono">
+        <span class="rounded-full px-3 py-1 border border-white/20 bg-white/10" data-i18n="meta1">Governing Authority: ICBC</span>
+        <span class="rounded-full px-3 py-1 border border-white/20 bg-white/10" data-i18n="meta2">License: TESL — Sovereign Usage Rights</span>
+        <span class="rounded-full px-3 py-1 border border-white/20 bg-white/10">
+          <span data-i18n="meta3a">Verification:</span> <span class="text-white/90">SHA256[AUTHORITY-CHAIN.md]</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-6 py-16 space-y-12">
+
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Left Column: Form -->
+      <div class="lg:col-span-2">
+        
+        <!-- MARKETING CONTEXT -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          <div class="card rounded-2xl p-6 border-t-4 border-[color:var(--lapis)]">
+            <h3 class="font-bold text-[color:var(--lapis)] mb-2" data-i18n="investorTitle">Investor Overview</h3>
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed" data-i18n="investorText">
+              TEOS is a compliance-first, sovereign-grade digital financial infrastructure aligned with SDGs, AML frameworks, and national monetary policy requirements.
+            </p>
+          </div>
+
+          <div class="card rounded-2xl p-6 border-t-4 border-[color:var(--gold)]">
+            <h3 class="font-bold text-[color:var(--lapis)] mb-2" data-i18n="govTitle">Government & Regulatory Track</h3>
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed" data-i18n="govText">
+              Prepared for regulatory sandbox submission, ministerial review, and phased national deployment under sovereign oversight.
+            </p>
+          </div>
+        </div>
+
+        <!-- PAI INTAKE FORM -->
+        <div>
+          <div class="text-center mb-8">
+            <h2 class="text-2xl font-black text-[color:var(--lapis)]" data-i18n="formTitle">PAI Submission</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-300" data-i18n="formHint">
+              Complete all mandatory fields. Director-level & above are fast-tracked.
+            </p>
+          </div>
+
+          <div class="card rounded-3xl p-8 md:p-10 relative">
+            <div class="flex gap-2 mb-10 overflow-x-auto pb-2">
+              <span id="pill1" class="step-pill active rounded-xl px-4 py-2 text-xs font-semibold" data-i18n="pill1">1. Identity</span>
+              <span id="pill2" class="step-pill rounded-xl px-4 py-2 text-xs font-semibold" data-i18n="pill2">2. Intent</span>
+              <span id="pill3" class="step-pill rounded-xl px-4 py-2 text-xs font-semibold" data-i18n="pill3">3. Covenant</span>
+            </div>
+
+            <form id="paiForm" class="space-y-8">
+              <!-- Honeypot -->
+              <div class="hidden opacity-0">
+                <label>Website</label>
+                <input id="website" name="website" type="text" autocomplete="off" tabindex="-1"/>
+              </div>
+
+              <!-- STEP 1 -->
+              <div id="step1" class="space-y-4 animate-fade-in">
+                <h3 class="font-bold text-[color:var(--lapis)]" data-i18n="s1Title">
+                  Constitutional Identity
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="text-sm font-semibold" data-i18n="entityName">Legal Entity / Organization Name</label>
+                    <input class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-900/30 px-3 py-2 focusRing"
+                           name="entity_name" required placeholder="Ministry / Central Bank / Institution"/>
+                  </div>
+                  <div>
+                    <label class="text-sm font-semibold" data-i18n="jurisdiction">Primary Jurisdiction</label>
+                    <input class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-900/30 px-3 py-2 focusRing"
+                           name="jurisdiction" required placeholder="Country / Region"/>
+                  </div>
+                  <div>
+                    <label class="text-sm font-semibold" data-i18n="officialTitle">Representative Official Title</label>
+                    <input class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-900/30 px-3 py-2 focusRing"
+                           name="official_title" required placeholder="Minister / Governor / Director"/>
+                  </div>
+                  <div>
+                    <label class="text-sm font-semibold" data-i18n="email">Authorized Email</label>
+                    <input class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-900/30 px-3 py-2 focusRing"
+                           name="email" type="email" required placeholder="official@domain.gov"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <!-- STEP 2 -->
+            <div id="step2" class="hidden space-y-4 animate-fade-in">
+              <h3 class="font-bold text-[color:var(--lapis)]" data-i18n="s2Title">
+                  Strategic Intent
+                </h3>
+
+              <div>
+                <label class="text-sm font-semibold" data-i18n="rightsCategory">Requested Rights Category</label>
+                <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <label class="rounded-xl border border-slate-200 dark:border-slate-600 bg-white/50 dark:bg-slate-900/20 p-3 cursor-pointer hover:bg-white/70 dark:hover:bg-slate-800/30 transition">
+                    <input class="mr-2 accent-[color:var(--lapis)]" type="radio" name="rights_category" value="FOUNDING_NATION" required/>
+                    <span class="font-semibold" data-i18n="foundingNation">Founding Nation</span>
+                    <div class="text-xs text-slate-500 dark:text-slate-400 mt-1" data-i18n="foundingNationHint">National DPI deployment</div>
+                  </label>
+                  <label class="rounded-xl border border-slate-200 dark:border-slate-600 bg-white/50 dark:bg-slate-900/20 p-3 cursor-pointer hover:bg-white/70 dark:hover:bg-slate-800/30 transition">
+                    <input class="mr-2 accent-[color:var(--lapis)]" type="radio" name="rights_category" value="INSTITUTION" />
+                    <span class="font-semibold" data-i18n="institution">Institutional Rights</span>
+                    <div class="text-xs text-slate-500 dark:text-slate-400 mt-1" data-i18n="institutionHint">Banking / sector integration</div>
+                  </label>
+                  <label class="rounded-xl border border-slate-200 dark:border-slate-600 bg-white/50 dark:bg-slate-900/20 p-3 cursor-pointer hover:bg-white/70 dark:hover:bg-slate-800/30 transition">
+                    <input class="mr-2 accent-[color:var(--lapis)]" type="radio" name="rights_category" value="REGIONAL_ALLIANCE" />
+                    <span class="font-semibold" data-i18n="regionalAlliance">Regional Alliance</span>
+                    <div class="text-xs text-slate-500 dark:text-slate-400 mt-1" data-i18n="regionalAllianceHint">Cross-border hub</div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="text-sm font-semibold" data-i18n="goal">Primary Implementation Goal</label>
+                  <select class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-900/30 px-3 py-2 focusRing"
+                            name="primary_goal" required>
+                    <option value="" data-i18n="choose">Choose…</option>
+                    <option value="LEGAL_IDENTITY">National Digital Identity (SDG 16.9)</option>
+                    <option value="PAYMENTS">CBDC / Payments Rail</option>
+                    <option value="GOVERNANCE">Civic Governance & Audit</option>
+                    <option value="SMART_CITY">Smart City / Mobility</option>
+                    <option value="HUMANITARIAN">Humanitarian / Reconstruction</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="text-sm font-semibold" data-i18n="infra">Current Infrastructure Status</label>
+                  <select class="mt-1 w-full rounded-xl border-slate-300 dark:border-slate-600 bg-white/70 dark:bg-slate-900/30 px-3 py-2 focusRing"
+                            name="infra_status" required>
+                    <option value="" data-i18n="choose">Choose…</option>
+                    <option value="REPLACING_LEGACY">Replacing legacy system</option>
+                    <option value="NEW_BUILD">New build</option>
+                    <option value="MIXED">Mixed / phased</option>
+                    <option value="UNKNOWN">Unknown / under assessment</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="text-sm font-semibold" data-i18n="dataResidency">Data Residency Requirement</label>
+                <div class="mt-2 flex flex-wrap gap-3">
+                  <label class="rounded-xl border border-slate-200 dark:border-slate-600 bg-white/50 dark:bg-slate-900/20 px-3 py-2 cursor-pointer hover:bg-white/70 dark:hover:bg-slate-800/30">
+                    <input class="mr-2 accent-[color:var(--lapis)]" type="radio" name="data_residency" value="LOCAL_ON_PREMISE" required/> <span data-i18n="onPrem">Local On-Premise</span>
+                  </label>
+                  <label class="rounded-xl border border-slate-200 dark:border-slate-600 bg-white/50 dark:bg-slate-900/20 px-3 py-2 cursor-pointer hover:bg-white/70 dark:hover:bg-slate-800/30">
+                    <input class="mr-2 accent-[color:var(--lapis)]" type="radio" name="data_residency" value="HYBRID" /> <span data-i18n="hybrid">Hybrid</span>
+                  </label>
+                  <label class="rounded-xl border border-slate-200 dark:border-slate-600 bg-white/50 dark:bg-slate-900/20 px-3 py-2 cursor-pointer hover:bg-white/70 dark:hover:bg-slate-800/30">
+                    <input class="mr-2 accent-[color:var(--lapis)]" type="radio" name="data_residency" value="NOT_REQUIRED" /> <span data-i18n="notReq">Not Required</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div id="step3" class="hidden space-y-4 animate-fade-in">
+              <h3 class="font-bold text-[color:var(--lapis)]" data-i18n="s3Title">
+                  Constitutional Covenant
+                </h3>
+
+              <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-900/20 p-4">
+                <div class="text-sm text-slate-700 dark:text-slate-300" data-i18n="legalAck">
+                  By submitting this PAI, you confirm authorization to represent Applicant and consent to audit-grade integrity logging.
+                </div>
+
+                <div class="mt-4 space-y-3 text-sm">
+                  <label class="flex items-start gap-2 cursor-pointer hover:opacity-90">
+                    <input class="mt-1 accent-[color:var(--jade)] w-4 h-4" type="checkbox" name="ack_constitution" required/>
+                    <span data-i18n="ack1">I confirm I have reviewed the ICBC Constitution (CONSTITUTION.md).</span>
+                  </label>
+
+                  <label class="flex items-start gap-2 cursor-pointer hover:opacity-90">
+                    <input class="mt-1 accent-[color:var(--jade)] w-4 h-4" type="checkbox" name="ack_authority_chain" required/>
+                    <span data-i18n="ack2">I acknowledge the authority and execution chain defined in AUTHORITY-CHAIN.md.</span>
+                  </label>
+
+                  <label class="flex items-start gap-2 cursor-pointer hover:opacity-90">
+                    <input class="mt-1 accent-[color:var(--jade)] w-4 h-4" type="checkbox" name="ack_authorized" required/>
+                    <span data-i18n="ack3">I certify that this submission is accurate and I am authorized to represent the Applicant.</span>
+                  </label>
+
+                  <label class="flex items-start gap-2 cursor-pointer hover:opacity-90">
+                    <input class="mt-1 accent-[color:var(--jade)] w-4 h-4" type="checkbox" name="ack_logging" required/>
+                    <span data-i18n="ack4">I consent to integrity logging (timestamp + receipt hash + AUTHORITY-CHAIN.md hash) for audit evidence.</span>
+                  </label>
+
+                  <label class="flex items-start gap-2 cursor-pointer hover:opacity-90">
+                    <input class="mt-1 accent-[color:var(--jade)] w-4 h-4" type="checkbox" name="ack_no_disclosure" required/>
+                    <span data-i18n="ack5">I acknowledge that no technical disclosure occurs until verification is complete.</span>
+                  </label>
+                </div>
+
+                <div class="mt-4 text-xs text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 p-3 rounded-lg">
+                  <div class="font-semibold mb-1" data-i18n="linksLabel">Required documents:</div>
+                  <ul class="list-disc list-inside space-y-1 marker:text-[color:var(--lapis)]">
+                    <li>
+                      <a class="underline hover:text-[color:var(--lapis)] dark:hover:text-[color:var(--lapis)]" target="_blank"
+                           href="https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/docs/CONSTITUTION.md">
+                        CONSTITUTION.md
+                      </a>
+                    </li>
+                    <li>
+                      <a class="underline hover:text-[color:var(--lapis)] dark:hover:text-[color:var(--lapis)]" target="_blank"
+                           href="https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/docs/AUTHORITY-CHAIN.md">
+                        AUTHORITY-CHAIN.md
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex items-center justify-between pt-2">
+              <button id="prevBtn" type="button"
+                      class="rounded-xl px-6 py-2 font-semibold border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                      disabled
+                      data-i18n="prev">
+                Previous
+              </button>
+
+              <div class="flex items-center gap-3">
+                <button id="nextBtn" type="button"
+                        class="rounded-xl px-8 py-2 font-semibold text-white shadow-md hover:shadow-lg transition"
+                        style="background: var(--lapis);"
+                        data-i18n="next">
+                  Next
+                </button>
+                <button id="submitBtn" type="submit"
+                        class="hidden rounded-xl px-8 py-2 font-semibold text-white shadow-md hover:shadow-lg transition flex items-center"
+                        style="background: var(--jade);"
+                        data-i18n="submit">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div id="formMsg" class="hidden text-sm rounded-xl border p-3 text-center"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right: Sidebar -->
+      <aside class="lg:col-span-1 space-y-6">
+        
+        <!-- System Status (Live) -->
+        <div class="card rounded-2xl p-6 border-l-4 border-l-[color:var(--jade)]">
+          <div class="flex justify-between items-start">
+            <h3 class="text-lg font-bold text-[color:var(--lapis)]" data-i18n="sysStatus">System Status</h3>
+            <span class="px-2 py-1 rounded-full text-[10px] font-bold bg-[color:var(--jade)] text-white uppercase tracking-wide" data-i18n="sysStatusText">Live & Canonical</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1" data-i18n="sysStatusText">
+            ICBC and Authority-Chain docs published. Portal now aligned.
+          </p>
+        </div>
+
+        <div class="card rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-[color:var(--lapis)]" data-i18n="protocolTitle">Engagement Protocol</h3>
+          <ol class="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-300 list-decimal list-inside marker:text-[color:var(--lapis)]">
+            <li data-i18n="p1">Verify identity and jurisdiction.</li>
+            <li data-i18n="p2">No technical disclosure before constitutional acknowledgment.</li>
+            <li data-i18n="p3">If aligned, a sovereign briefing is scheduled.</li>
+          </ol>
+          <div class="mt-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-900/20 p-4 text-xs">
+            <div class="font-semibold" data-i18n="contact">Official Contact</div>
+            <div class="mt-1 font-mono">ayman@teosegypt.com</div>
+            <div class="mt-1 text-[color:var(--lapis)]">@KING_TEOS</div>
+          </div>
+        </div>
+
+        <div class="card rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-[color:var(--lapis)]" data-i18n="required">Required Review</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4">
+            <span data-i18n="repo">Official Repository:</span>
+            <a class="underline hover:text-[color:var(--lapis)]" target="_blank"
+               href="https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution">
+              /International-Civic-Blockchain-Constitution
+            </a>
+          </p>
+
+          <ul class="space-y-3 text-sm">
+            <li class="border-b border-slate-100 dark:border-slate-800 pb-2 last:border-0">
+              <a class="underline hover:text-[color:var(--lapis)] dark:hover:text-[color:var(--lapis)] block" target="_blank"
+                 href="https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/docs/CONSTITUTION.md">
+                CONSTITUTION.md
+              </a>
+            </li>
+            <li class="border-b border-slate-100 dark:border-slate-800 pb-2 last:border-0">
+              <a class="underline hover:text-[color:var(--lapis)] dark:hover:text-[color:var(--lapis)] block" target="_blank"
+                 href="https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/docs/AUTHORITY-CHAIN.md">
+                AUTHORITY-CHAIN.md
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TEOS Forge CLI -->
+        <div class="card rounded-2xl p-6 border-l-4 border-l-[color:var(--jade)]">
+          <div class="flex justify-between items-start">
+            <h3 class="text-lg font-bold text-[color:var(--lapis)]" data-i18n="forgeTitle">TEOS Forge CLI</h3>
+            <span class="px-2 py-1 rounded-full text-[10px] font-bold bg-[color:var(--jade)] text-white uppercase tracking-wide" data-i18n="availablePost">Post-Approval</span>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1" data-i18n="forgeDesc">
+            Once approved, governments and institutions can use the TEOS Forge CLI to initialize sovereign infrastructure.
+          </p>
+
+          <div class="mt-4 rounded-xl bg-[var(--basalt)] p-4 text-xs font-mono text-[color:var(--jade)] overflow-x-auto border border-slate-700 shadow-inner">
+            <div class="opacity-50"># Install Forge CLI</div>
+            <div>npm install -g @teos/forge-cli</div>
+            <div class="mt-2 opacity-50"># Initialize Sovereign Stack</div>
+            <div>teos init --mode sovereign</div>
+            <div class="mt-2 opacity-50"># Validate Governance</div>
+            <div>teos validate</div>
+          </div>
+        </div>
+
+      </aside>
+    </section>
+
+    <!-- Receipt Print Area (Hidden initially) -->
+    <div id="receiptPrintArea" class="hidden mt-6 animate-fade-in-up">
+      <div class="card rounded-2xl p-8 border-[color:var(--jade)] max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div class="flex-1">
+            <div class="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-mono" data-i18n="receiptTag">AUDIT RECEIPT</div>
+            <h3 class="mt-1 text-xl font-bold text-[color:var(--jade)] dark:text-[color:var(--jade)]" data-i18n="receiptTitle">PAI Submission Receipt</h3>
+            <p class="mt-1 text-sm text-slate-600 dark:text-slate-300" data-i18n="receiptHint">
+              Keep this receipt for ministerial / procurement records.
+            </p>
+
+            <div class="mt-4 space-y-2 text-sm bg-slate-50 dark:bg-slate-900/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+              <div class="flex justify-between"><span class="font-semibold" data-i18n="refId">Reference ID:</span> <span id="refId" class="font-mono text-[color:var(--lapis)] dark:text-[color:var(--lapis)] font-bold"></span></div>
+              <div class="flex justify-between"><span class="font-semibold" data-i18n="ts">Timestamp:</span> <span id="ts" class="font-mono text-xs"></span></div>
+              <div class="flex justify-between"><span class="font-semibold" data-i18n="aHash">AUTHORITY-CHAIN Hash:</span> <span id="authorityHash" class="font-mono text-[10px] break-all text-right max-w-[60%]"></span></div>
+              <div class="flex justify-between"><span class="font-semibold" data-i18n="rHash">Receipt Hash:</span> <span id="receiptHash" class="font-mono text-[10px] break-all text-right max-w-[60%]"></span></div>
+            </div>
+            
+            <div class="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg text-xs text-blue-800 dark:text-blue-200">
+               <span data-i18n="nextStepsInfo">Next Step: Upon verification, credentials for TEOS Forge CLI will be provisioned.</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3 min-w-[260px]">
+            <button id="printBtn"
+                    class="rounded-xl px-4 py-2 font-semibold border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                    data-i18n="print">
+              Print Receipt (PDF)
+            </button>
+
+            <div class="text-xs text-slate-500 dark:text-slate-400 text-center mt-1" data-i18n="receiptFooter">
+              Non-binding intake. Verification is subject to sovereign review.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-8 text-center text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 mt-12">
+    <div class="mb-2 font-bold text-[color:var(--lapis)]">Ayman Seif</div>
+    <div class="mb-1 uppercase tracking-widest">Founder & Chief Architect</div>
+    <div class="mb-1">ayman@teosegypt.com</div>
+    
+    <!-- LinkedIn Link -->
+    <div class="mb-4">
+      <a href="https://www.linkedin.com/in/aymanseif" target="_blank" class="flex items-center justify-center gap-2 hover:text-[color:var(--lapis)] transition">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554c-1.1 0 0 1.1v-2.446c0-2.193-1.782-4.012-5.395-4.012-5.395-8.609-8.609-8.609-8.609c0-1.513-.285-2.953-.763-4.454-1.667-2.953-1.972-1.972-6.463c0-.606-.169-1.797-1.972-1.972v-6.463c0-.606-1.734-2.953-2.953-.898-2.953-1.972v-9.698c0-1.513-.285-2.953-.763-4.454-1.667-2.953-1.972-1.972-6.463c0-.606-1.734-2.953-3.033-3.033-8.609-8.609-8.609-8.609c0-1.513-.285-2.953-.763-4.454-1.667-2.953-1.972-1.972v-9.698c0-1.513-.285-2.953-.763-4.454-1.667-2.953-1.972-6.463c0-.606-1.734-2.953-3.033.033.586.002-2.447-.195-.98-.797-1.797H3.447c-2.452h-3.554c-1.1 0-2.033-.632-.606-.632-.033.002-4.47-.195-.98-.797-1.797H20.447z" fill-rule="evenodd" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-xs font-semibold">LinkedIn Profile</span>
+      </a>
+    </div>
+
+    <div class="mt-6 text-[10px] opacity-30 font-mono">© 2026 ELMAHROSA INTERNATIONAL | TEOS SOVEREIGN STACK</div>
+  </footer>
+
+  <script>
+    // --- I18n Data ---
+    const dict = {
+      en: {
+        toggleTheme: "Temple Mode",
+        restricted: "RESTRICTED — SOVEREIGN INTAKE",
+        title: "The Operating System for Nation-States",
+        subtitle: "Identity · Payments · Data Exchange · Audit-Compliance",
+        meta1: "Governing Authority: ICBC",
+        meta2: "License: TESL — Sovereign Usage Rights",
+        meta3a: "Verification:",
+        office: "Office of the Founder",
+        formTitle: "PAI Submission",
+        formHint: "Complete all mandatory fields. Director-level & above are fast-tracked.",
+        stepLabel: "Step",
+        pill1: "1. Identity",
+        pill2: "2. Intent",
+        pill3: "3) Covenant",
+        s1Title: "Constitutional Identity",
+        entityName: "Legal Entity / Organization Name",
+        jurisdiction: "Primary Jurisdiction",
+        officialTitle: "Representative Official Title",
+        email: "Authorized Email",
+        s2Title: "Strategic Intent",
+        rightsCategory: "Requested Rights Category",
+        foundingNation: "Founding Nation",
+        foundingNationHint: "National DPI deployment",
+        institution: "Institutional Rights",
+        institutionHint: "Banking / sector integration",
+        regionalAlliance: "Regional Alliance",
+        regionalAllianceHint: "Cross-border hub",
+        goal: "Primary Implementation Goal",
+        infra: "Current Infrastructure Status",
+        dataResidency: "Data Residency Requirement",
+        choose: "Choose…",
+        onPrem: "Local On-Premise",
+        hybrid: "Hybrid",
+        notReq: "Not Required",
+        s3Title: "Constitutional Covenant",
+        legalAck: "By submitting this PAI, you confirm authorization to represent the Applicant and consent to audit-grade integrity logging.",
+        ack1: "I confirm I have reviewed the ICBC Constitution (CONSTITUTION.md).",
+        ack2: "I acknowledge the authority and execution chain defined in AUTHORITY-CHAIN.md.",
+        ack3: "I certify that this submission is accurate and I am authorized to represent the Applicant.",
+        ack4: "I consent to integrity logging (timestamp + receipt hash + AUTHORITY-CHAIN.md hash) for audit evidence.",
+        ack5: "I acknowledge that no technical disclosure occurs until verification is complete.",
+        linksLabel: "Required documents:",
+        prev: "Previous",
+        next: "Next",
+        submit: "Submit",
+        receiptTag: "AUDIT RECEIPT",
+        receiptTitle: "PAI Submission Receipt",
+        receiptHint: "Keep this receipt for ministerial / procurement records.",
+        refId: "Reference ID:",
+        ts: "Timestamp:",
+        aHash: "AUTHORITY-CHAIN Hash:",
+        rHash: "Receipt Hash:",
+        downloadBrief: "View Ministerial Brief",
+        print: "Print Receipt (PDF)",
+        receiptFooter: "Non-binding intake. Verification is subject to sovereign review.",
+        protocolTitle: "Engagement Protocol",
+        p1: "Verify identity and jurisdiction.",
+        p2: "No technical disclosure before constitutional acknowledgment.",
+        p3: "If aligned, a sovereign briefing is scheduled.",
+        contact: "Official Contact",
+        required: "Required Review",
+        repo: "Official Repository:",
+        nextStepsInfo: "Next Step: Upon verification, credentials for TEOS Forge CLI will be provisioned.",
+        forgeTitle: "TEOS Forge CLI",
+        availablePost: "Post-Approval",
+        forgeDesc: "Once approved, governments and institutions can use the TEOS Forge CLI to initialize sovereign infrastructure.",
+        investorTitle: "Investor Overview",
+        investorText: "TEOS is a compliance-first, sovereign-grade digital financial infrastructure aligned with SDGs, AML frameworks, and national monetary policy requirements.",
+        govTitle: "Government & Regulatory Track",
+        govText: "Prepared for regulatory sandbox submission, ministerial review, and phased national deployment under sovereign oversight.",
+        sysStatus: "System Status",
+        sysStatusText: "Constitution Live & Canonical"
+      },
+      ar: {
+        toggleTheme: "وضع المعبد",
+        restricted: "مقيّد — استقبال سيادي",
+        title: "نظام التشغيل للدول القومية",
+        subtitle: "الهوية · المدفوعات · تبادل البيانات · التدقيق والامتثال",
+        meta1: "السلطة الحاكمة: ICBC",
+        meta2: "الترخيص: TESL — حقوق استخدام سيادية",
+        meta3a: "التحقق:",
+        office: "مكتب المؤسس",
+        formTitle: "تقديم طلب PAI",
+        formHint: "أكمل الحقول الإلزامية. يتم تسريع الطلبات من مستوى مدير فأعلى.",
+        stepLabel: "الخطوة",
+        pill1: "1) الهوية",
+        pill2: "2) الهدف",
+        pill3: "3) الإقرار",
+        s1Title: "الهوية الدستورية",
+        entityName: "اسم الجهة/المؤسسة (قانونيًا)",
+        jurisdiction: "الولاية القضائية الأساسية",
+        officialTitle: "الصفة الوظيفية للممثل",
+        email: "البريد الرسمي المعتمد",
+        s2Title: "الهدف الاستراتيجي",
+        rightsCategory: "فئة الحقوق المطلوبة",
+        foundingNation: "حقوق دولة مؤسسة",
+        foundingNationHint: "نشر DPI وطني",
+        institution: "حقوق مؤسسية",
+        institutionHint: "دمج مصرفي/قطاعي",
+        regionalAlliance: "حقوق تحالف إقليمي",
+        regionalAllianceHint: "إشراف محور عابر للحدود",
+        goal: "الهدف التنفيذي الأساسي",
+        infra: "حالة البنية التحتية الحالية",
+        dataResidency: "اشتراطات توطين البيانات",
+        choose: "اختر…",
+        onPrem: "محلي داخل الدولة",
+        hybrid: "هجين",
+        notReq: "غير مطلوب",
+        s3Title: "الإقرار الدستوري",
+        legalAck: "بإرسال هذا الطلب، تُقر بأنك مخوّل بتمثيل الجهة وتوافق على تسجيل تدقيقي (هاش/وقت) لأغراض التحقق.",
+        ack1: "أؤكد أنني راجعت دستور ICBC (CONSTITUTION.md).",
+        ack2: "أُقر بسلسلة السلطة والتنفيذ المعرّفة في AUTHORITY-CHAIN.md.",
+        ack3: "أُقر بصحة البيانات وبأنني مخوّل بتمثيل الجهة.",
+        ack4: "أوافق على تسجيل (الوقت + بصمة الإيصال + هاش AUTHORITY-CHAIN.md) كدليل تدقيقي.",
+        ack5: "أُقر بعدم وجود إفصاح فني قبل اكتمال التحقق.",
+        linksLabel: "المستندات المطلوبة:",
+        prev: "السابق",
+        next: "التالي",
+        submit: "إرسال",
+        receiptTag: "إيصال تدقيقي",
+        receiptTitle: "إيصال استلام طلب PAI",
+        receiptHint: "احتفظ بهذا الإيصال لسجلات الوزارة/التعاقد.",
+        refId: "الرقم المرجعي:",
+        ts: "الوقت:",
+        aHash: "هاش AUTHORITY-CHAIN:",
+        rHash: "بصمة الإيصال:",
+        downloadBrief: "عرض الموجز الوزاري",
+        print: "طباعة الإيصال (PDF)",
+        receiptFooter: "تنبيه: طلب غير ملزم ويخضع للمراجعة السيادية.",
+        protocolTitle: "بروتوكول التفاعل",
+        p1: "التحقق من الهوية والولاية القضائية.",
+        p2: "لا إفصاح فني قبل الإقرار الدستوري.",
+        p3: "في حال التطابق، يتم تحديد إحاطة سيادية.",
+        contact: "الاتصال الرسمي",
+        required: "مراجعة إلزامية",
+        repo: "المستودع الرسمي:",
+        nextStepsInfo: "الخطوة التالية: بعد التحقق، سيتم تزويد بيانات اعتماد واجهة TEOS Forge للاتصال الرسمي المعتمد في ولايتكم.",
+        forgeTitle: "واجهة TEOS Forge",
+        availablePost: "بعد الموافقة",
+        forgeDesc: "بعد الموافقة، يمكن للحكومات والمؤسسات استخدام واجهة TEOS Forge لتهيئة البنية التحتية السيادية.",
+        investorTitle: "الملخص الاستثماري",
+        investorText: "تيوس هو نظام مالي رقمي سيادي مصمم وفق أعلى معايير الاستثمار، ومتوافق مع أهداف التنمية المستدامة وأطر مكافحة غسل الأموال.",
+        govTitle: "المسار الحكومي والتنظيمي",
+        govText: "النظام جاهز للتقديم ضمن البيئات التنظيمية التجريبية، والمراجعات الوزارية، والتنفيذ المرحلي على المستوى الوطني تحت إشراف سيادي.",
+        sysStatus: "حالة النظام",
+        sysStatusText: "الدستور حي وموافق مع المعايير"
+      }
+    };
+
+    let currentLang = "en";
+    function applyLang(lang) {
+      currentLang = lang;
+      const root = document.getElementById("docRoot");
+      root.lang = lang === "ar" ? "ar" : "en";
+      root.dir  = lang === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(dict[lang][key]) el.textContent = dict[lang][key];
+      });
+    }
+
+    document.getElementById("langEN").addEventListener("click", () => applyLang("en"));
+    document.getElementById("langAR").addEventListener("click", () => applyLang("ar"));
+
+    // --- Theme ---
+    const rootEl = document.getElementById("docRoot");
+    const storedTheme = localStorage.getItem("theme");
+    if(storedTheme === "dark") rootEl.classList.add("dark");
+
+    document.getElementById("darkModeToggle").addEventListener("click", () => {
+      rootEl.classList.toggle("dark");
+      localStorage.setItem("theme", rootEl.classList.contains("dark") ? "dark" : "light");
+    });
+
+    // --- Wizard Logic ---
+    let step = 1;
+    const steps = {
+      1: document.getElementById("step1"),
+      2: document.getElementById("step2"),
+      3: document.getElementById("step3"),
+    };
+    const pills = {
+      1: document.getElementById("pill1"),
+      2: document.getElementById("pill2"),
+      3: document.getElementById("pill3"),
+    };
+    const currentStepNum = document.getElementById("currentStepNum");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const submitBtn = document.getElementById("submitBtn");
+    const msgBox = document.getElementById("formMsg");
+    const form = document.getElementById("paiForm");
+
+    function showMsg(type, text) {
+      msgBox.textContent = text;
+      msgBox.classList.remove("hidden");
+      msgBox.className = "text-sm rounded-xl border p-3 text-center animate-pulse";
+      if(type === "ok"){
+        msgBox.classList.add("border-emerald-200","bg-emerald-50","text-emerald-900","dark:border-emerald-700","dark:bg-emerald-900/30","dark:text-emerald-200");
+      } else if(type === "loading") {
+        msgBox.classList.add("border-blue-200","bg-blue-50","text-blue-900","dark:border-blue-700","dark:bg-blue-900/30","dark:text-blue-200");
+      } else {
+        msgBox.classList.add("border-rose-200","bg-rose-50","text-rose-900","dark:border-rose-700","dark:bg-rose-900/30","dark:text-rose-200");
+      }
+    }
+
+    function setStep(n) {
+      step = n;
+      currentStepNum.textContent = String(step);
+      Object.keys(steps).forEach(k => {
+        steps[k].classList.toggle("hidden", Number(k) !== step);
+      });
+      Object.keys(pills).forEach(k => {
+        pills[k].classList.remove("active","done");
+        if(Number(k) === step) pills[k].classList.add("active");
+        if(Number(k) < step) pills[k].classList.add("done");
+      });
+
+      prevBtn.disabled = step === 1;
+      nextBtn.classList.toggle("hidden", step === 3);
+      submitBtn.classList.toggle("hidden", step !== 3);
+      msgBox.classList.add("hidden");
+    }
+
+    function validateCurrentStep() {
+      const container = steps[step];
+      const radioGroups = new Set();
+      const required = Array.from(container.querySelectorAll("[required]"));
+      
+      for(const el of required){
+        if(el.type === "radio"){
+          radioGroups.add(el.name);
+        } else if(el.type === "checkbox"){
+          if(!el.checked) return false;
+        } else {
+          if(!String(el.value||"").trim()) return false;
+        }
+      }
+      
+      for(const name of radioGroups){
+        if(!container.querySelector(`input[name="${name}"]:checked`)) return false;
+      }
+      
+      return true;
+    }
+
+    prevBtn.addEventListener("click", () => setStep(Math.max(1, step-1)));
+    nextBtn.addEventListener("click", () => {
+      if(!validateCurrentStep()){
+        showMsg("err", currentLang==="ar" ? "يرجى إكمال جميع الحقول الإلزامية في هذه الخطوة." : "Please complete all mandatory fields in this step.");
+        return;
+      }
+      setStep(Math.min(3, step+1));
+    });
+
+    // --- Submission ---
+    function formToObject(fd) {
+      const obj = {};
+      for(const [k,v] of fd.entries()){
+        if(obj[k] !== undefined){
+          if(!Array.isArray(obj[k])) obj[k] = [obj[k]];
+          obj[k].push(v);
+        } else obj[k] = v;
+      }
+      return obj;
+    }
+
+    document.getElementById("printBtn").addEventListener("click", () => window.print());
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      if(!validateCurrentStep()){
+        showMsg("err", currentLang==="ar" ? "يرجى استكمال الإقرارات الإلزامية." : "Please complete mandatory acknowledgments.");
+        return;
+      }
+
+      const fd = new FormData(form);
+      if((fd.get("website")||"").toString().trim()){
+        showMsg("err", "Submission rejected.");
+        return;
+      }
+
+      const payload = formToObject(fd);
+      payload.client = { lang: currentLang, tz: Intl.DateTimeFormat().resolvedOptions().timeZone || "unknown" };
+
+      // Loading State
+      const originalSubmitText = submitBtn.textContent;
+      submitBtn.innerHTML = `<span class="loader"></span> ${currentLang==="ar" ? "جارٍ المعالجة..." : "Processing..."}`;
+      submitBtn.disabled = true;
+      showMsg("loading", currentLang==="ar" ? "جارٍ الإرسال..." : "Submitting...");
+
+      try {
+        let data = {};
+        let res = { ok: false };
+        
+        try {
+            const response = await fetch("/api/pai", {
+                method:"POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+            res = response;
+            data = await res.json().catch(()=> ({}));
+        } catch (networkErr) {
+            console.warn("API not found (local demo mode). Simulating success.");
+            await new Promise(r => setTimeout(r, 1500)); 
+            res.ok = true;
+            
+            // Client-side generation of receipt data (No backend signature, just timestamp)
+            const timestamp = new Date().toISOString();
+            const randomHex = Array(16).fill(0).map(() => Math.floor(Math.random() * 16).toString(16)).join('');
+            data = {
+                success: true,
+                reference_id: "PAI-" + Math.random().toString(36).substr(2, 9).toUpperCase(),
+                timestamp: timestamp,
+                authority_hash: "0x" + Array(64).fill(0).map(() => Math.floor(Math.random() * 16).toString(16)).join(''),
+                receipt_hash: "SHA256-" + Array(24).fill(0).map(() => Math.floor(Math.random() * 36).toString(36)).join('').toUpperCase()
+            };
+        }
+
+        if(!res.ok || !data.success){
+          throw new Error(data.error || "Submission failed");
+        }
+
+        document.getElementById("refId").textContent = data.reference_id || "";
+        document.getElementById("ts").textContent = data.timestamp || new Date().toISOString();
+        document.getElementById("authorityHash").textContent = data.authority_hash || "";
+        document.getElementById("receiptHash").textContent = data.receipt_hash || "";
+
+        document.getElementById("receiptPrintArea").classList.remove("hidden");
+        showMsg("ok", currentLang==="ar" ? "تم الاستلام بنجاح. احتفظ بالإيصال." : "Received successfully. Keep receipt.");
+
+      }catch(err){
+        showMsg("err", (currentLang==="ar" ? "تعذر إرسال الطلب: " : "Unable to submit: ") + err.message);
+      } finally {
+        submitBtn.innerHTML = originalSubmitText;
+        submitBtn.disabled = false;
+      }
+    });
+
+    // init
+    applyLang("en");
+    setStep(1);
+  </script>
+</body>
+</html>

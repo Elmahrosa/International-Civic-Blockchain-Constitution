@@ -1,0 +1,30 @@
+name: Constitutional Hash Verification
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  verify-hashes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify PAI Receipt Spec Hash
+        run: |
+          echo "Verifying 06_PAI_RECEIPT_SPEC.md integrity..."
+
+          EXPECTED_HASH="571592d856dcc51999b3a766eb4ce1992c7921890376b9b963fce43bca13449e"
+          ACTUAL_HASH=$(sha256sum 06_PAI_RECEIPT_SPEC.md | awk '{print $1}')
+
+          if [ "$EXPECTED_HASH" != "$ACTUAL_HASH" ]; then
+            echo "❌ Hash mismatch detected!"
+            echo "Expected: $EXPECTED_HASH"
+            echo "Actual:   $ACTUAL_HASH"
+            exit 1
+          fi
+
+          echo "✅ Hash verified successfully."

@@ -1,0 +1,26 @@
+{
+  "document": "governance-metadata",
+  "status": "development",
+  "governance": {
+    "framework": "TEOS-FORGE-GLOBAL",
+    "compliance_standard": "Universal-DPI",
+    "human_authority": "Supreme",
+    "ai_role": "Decision-Support-Only"
+  },
+  "project": "International-Civic-Blockchain-Constitution",
+  "version": "1.0.0",
+  "organization": "Elmahrosa",
+  "authority": {
+    "icbc": "https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution",
+    "tesl_canonical": "https://github.com/Elmahrosa/International-Civic-Blockchain-Constitution/blob/main/LICENSE"
+  },
+  "references": {
+    "teos_forge": "https://github.com/Elmahrosa/TEOS-FORGE",
+    "elmahrosa_core": "https://github.com/Elmahrosa/elmahrosa-core"
+  },
+  "notes": [
+    "This file is descriptive metadata only and is not a teos.manifest.v1.",
+    "The ICBC repository remains the highest authority and is not subordinated to execution-layer manifests.",
+    "All ecosystem repositories must reference ICBC and canonical TESL."
+  ]
+}
