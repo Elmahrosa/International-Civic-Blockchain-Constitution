@@ -28,3 +28,6 @@ jobs:
           fi
 
           echo "✅ Hash verified successfully."
+      - name: Verify ministerial PDF hash
+        run: |
+          echo "<PASTE_HASH_HERE>  ministerial/PAI_Receipt_Spec_Executive.pdf" | sha256sum -c -
