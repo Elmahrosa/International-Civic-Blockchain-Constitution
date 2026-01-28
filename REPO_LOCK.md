@@ -69,6 +69,7 @@ This lock declaration is intended to provide:
 - Institutional continuity
 
 ---
+The canonical hash registry is maintained in: ministerial/HASHES.txt
 
 **Declared by:** Elmahrosa International  
 **Jurisdiction:** Cairo, Arab Republic of Egypt  
