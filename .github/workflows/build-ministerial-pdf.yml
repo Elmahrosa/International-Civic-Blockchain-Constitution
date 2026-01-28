@@ -1,0 +1,38 @@
+ name: Build Ministerial PDF
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pandoc & TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-fonts-extra
+
+      - name: Build PAI Executive PDF
+        run: |
+          pandoc ministerial/COVER_PAGE.md \
+                 ministerial/PAI_Receipt_Spec_Executive.md \
+            -o ministerial/PAI_Receipt_Spec_Executive.pdf \
+            --pdf-engine=xelatex \
+            --variable geometry:margin=1in \
+            --metadata title="Preliminary Access Inquiry (PAI)" \
+            --metadata subtitle="Ministerial Executive Summary" \
+            --metadata author="Elmahrosa International"
+
+      - name: Compute SHA-256
+        run: |
+          sha256sum ministerial/PAI_Receipt_Spec_Executive.pdf >> ministerial/HASHES.txt
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ministerial-pdf
+          path: ministerial/PAI_Receipt_Spec_Executive.pdf
