@@ -137,7 +137,7 @@ All documents in this directory are governed exclusively by the
 **TEOS Egypt Sovereign License (TESL)**.
 
 Canonical license source:
-https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE
+https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md
 
 ---
 

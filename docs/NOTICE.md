@@ -31,7 +31,7 @@ of the constitutional doctrine defined here.
 ## License Authority (Canonical)
 
 **TEOS Egypt Sovereign License (TESL)** — single source of truth:  
-https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE
+https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md
 
 All other repositories must reference this canonical license
 and must not redefine or duplicate license terms.

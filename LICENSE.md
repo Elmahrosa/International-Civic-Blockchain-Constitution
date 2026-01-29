@@ -90,7 +90,7 @@ External Applications, Institutions, Nations & Partners <span class="badge badge
   https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution
 
 - **License Authority (TESL)** <span class="badge badge-secondary">TESL</span>  
-  https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md
+  https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md.md
 
 - **Stewardship & Governance Anchor (TEOS-FORGE)** <span class="badge badge-primary">Forge</span>  
   https://github.com/Elmahrosa/TEOS-FORGE

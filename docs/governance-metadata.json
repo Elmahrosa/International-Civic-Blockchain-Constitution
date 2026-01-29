@@ -12,7 +12,7 @@
   "organization": "Elmahrosa",
   "authority": {
     "icbc": "https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution",
-    "tesl_canonical": "https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE"
+    "tesl_canonical": "https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md"
   },
   "references": {
     "teos_forge": "https://github.com/Elmahrosa/TEOS-FORGE",

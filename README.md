@@ -71,7 +71,7 @@ This repository derives all legitimacy and execution authority **exclusively** f
 - **Supreme Charter:**  
   https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution
 - **Canonical License (TESL):**  
-  https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md
+  https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md.md
 
 Governance stewardship and lifecycle control are anchored in **TEOS-FORGE**.  
 ([Foundational Mandates](https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/CONSTITUTION.md#foundational-mandates))
@@ -200,7 +200,7 @@ Governed exclusively by the
 **TEOS Egypt Sovereign License (TESL)**.
 
 **Canonical License (single source of truth):**  
-https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md
+https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md.md
 
 ---
 
