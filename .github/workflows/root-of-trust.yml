@@ -1,0 +1,59 @@
+name: Root of Trust
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify-root-of-trust:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify HASHES.sha256 integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "== Checking required files exist =="
+          required=(
+            "REPO_LOCK.md"
+            "CONSTITUTION.md"
+            "docs/AUTHORITY-CHAIN.md"
+            "LICENSE.md"
+            "HASHES.sha256"
+          )
+          for f in "${required[@]}"; do
+            test -f "$f" || { echo "Missing required file: $f"; exit 1; }
+          done
+
+          echo "== Enforce HASHES.sha256 contains ONLY Root-of-Trust files =="
+          allowed_regex='^(REPO_LOCK\.md|CONSTITUTION\.md|docs/AUTHORITY-CHAIN\.md|LICENSE\.md)$'
+          bad_lines="$(awk '{print $2}' HASHES.sha256 | sed 's|^\*||' | grep -Ev "$allowed_regex" || true)"
+          if [ -n "$bad_lines" ]; then
+            echo "HASHES.sha256 contains non-root entries (not allowed):"
+            echo "$bad_lines"
+            exit 1
+          fi
+
+          echo "== sha256sum verification =="
+          sha256sum -c HASHES.sha256
+
+      - name: Mirror sanity check (docs/CONSTITUTION.md should differ)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f "docs/CONSTITUTION.md" ]; then
+            root="$(sha256sum CONSTITUTION.md | awk '{print $1}')"
+            mirror="$(sha256sum docs/CONSTITUTION.md | awk '{print $1}')"
+            echo "root  : $root"
+            echo "mirror: $mirror"
+            if [ "$root" = "$mirror" ]; then
+              echo "Unexpected: mirror equals root. Mirror should include header and differ."
+              exit 1
+            fi
+          else
+            echo "docs/CONSTITUTION.md not present (ok)."
+          fi
