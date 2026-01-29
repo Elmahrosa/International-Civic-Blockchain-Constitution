@@ -240,3 +240,9 @@ Signed under one sovereign charter.
    ICBC constitutional amendment process.
 
 ---
+
+
+---
+
+## Canonical Repository
+https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution
