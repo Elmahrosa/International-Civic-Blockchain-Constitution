@@ -1,0 +1,11 @@
+# TEOS / ICBC — Code Owners
+# Protect Root-of-Trust files and constitutional artifacts
+
+* @Elmahrosa
+
+/REPO_LOCK.md @Elmahrosa
+/CONSTITUTION.md @Elmahrosa
+/docs/ @Elmahrosa
+/HASHES.sha256 @Elmahrosa
+/LICENSE.md @Elmahrosa
+/README.md @Elmahrosa
