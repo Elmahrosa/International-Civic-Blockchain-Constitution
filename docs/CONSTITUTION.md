@@ -1,3 +1,10 @@
+# Canonical Mirror
+
+> This file mirrors the root `CONSTITUTION.md`.
+> Do not edit directly. Edit `CONSTITUTION.md` and re-sync.
+
+---
+
 # 🌍 TEOS Civic Blockchain Constitution  
 ## Born in Egypt — Engineered for Nations — Scaled for the World
 
