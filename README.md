@@ -214,4 +214,3 @@ https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/bl
 **Governance before execution.  
 Audit before action.  
 Accountability before scale.**
-x
