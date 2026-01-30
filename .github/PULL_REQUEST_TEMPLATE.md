@@ -23,10 +23,10 @@ Provide a concise, factual description of the change.
 **Which constitutional authority permits this change?**  
 (Select and reference exact sections.)
 
-- ☐ Foundational Mandates  
-- ☐ Transparency & Auditability  
-- ☐ Amendment / Maintenance Allowance  
-- ☐ Documentation Clarification (Non-Substantive)  
+- [ ] Foundational Mandates  
+- [ ] Transparency & Auditability  
+- [ ] Amendment / Maintenance Allowance  
+- [ ] Documentation Clarification (Non-Substantive)  
 
 **Referenced Article / Section:**  
 > `CONSTITUTION.md` → Section: `__________`
