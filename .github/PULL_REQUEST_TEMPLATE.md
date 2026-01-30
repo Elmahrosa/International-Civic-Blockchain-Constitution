@@ -29,7 +29,7 @@ Provide a concise, factual description of the change.
 - ☐ Documentation Clarification (Non-Substantive)  
 
 **Referenced Article / Section:**  
-> `CONSTITUTION.md` → Section: `__________`
+> `CONSTITUTION.md` → Section: `[e.g., Article IV, Section 2.a]`
 
 ---
 
