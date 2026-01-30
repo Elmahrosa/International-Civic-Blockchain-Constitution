@@ -129,7 +129,7 @@ The TESL permits adoption and implementation while prohibiting transfer of sover
 **Founder:** Ayman Seif
 
 📧 [ayman@teosegypt.com](mailto:ayman@teosegypt.com)
-🌐 [https://teosegypt.com](https://teosegypt.com)
+🌐 [teosegypt.com](https://teosegypt.com)
 
 ---
 
