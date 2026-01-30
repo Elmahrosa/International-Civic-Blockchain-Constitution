@@ -72,8 +72,8 @@ If **yes**, confirm:
 
 ## 🚨 Risk Classification
 
-- ☐ **Low** — Documentation / wording only  
-- ☐ **Medium** — Governance clarification (no logic change)  
-- ☐ **High** — Root-of-Trust or constitutional text (requires heightened scrutiny)
+- [ ] **Low** — Documentation / wording only  
+- [ ] **Medium** — Governance clarification (no logic change)  
+- [ ] **High** — Root-of-Trust or constitutional text (requires heightened scrutiny)
 
 **Risk Notes (if any):**
