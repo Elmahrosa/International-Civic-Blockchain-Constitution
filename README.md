@@ -228,7 +228,7 @@ Governed exclusively by the
 **TEOS Egypt Sovereign License (TESL)**.
 
 **Canonical License (single source of truth):**
-[https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md](https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md)
+https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md
 
 ---
 
