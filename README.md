@@ -117,7 +117,7 @@ All constitutional material is governed exclusively by the:
 
 **TEOS Egypt Sovereign License (TESL)**
 📄 Canonical License:
-[https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md](https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md)
+[View the TESL License](https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md)
 
 The TESL permits adoption and implementation while prohibiting transfer of sovereign authority or constitutional ownership.
 
