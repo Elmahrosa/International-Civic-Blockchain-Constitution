@@ -1,4 +1,4 @@
-# Executive Summary  
+# Executive Summary
 ## Teos International Civic Blockchain Constitution
 
 ---
