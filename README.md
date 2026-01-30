@@ -137,8 +137,8 @@ The TESL permits adoption and implementation while prohibiting transfer of sover
 
 🇪🇬 *A civic constitution born in Egypt — designed for sovereign adoption worldwide.*
 
-**Law before code.
-Governance before automation.
+**Law before code.<br>
+Governance before automation.<br>
 Human authority above all systems.**
 
 </div>
