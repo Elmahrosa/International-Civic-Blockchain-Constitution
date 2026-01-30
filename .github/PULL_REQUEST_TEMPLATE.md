@@ -14,7 +14,7 @@ Provide a concise, factual description of the change.
 - ☐ Governance clarification  
 - ☐ Root-of-Trust maintenance  
 - ☐ Compliance / policy alignment  
-- ☐ Other (explain below)
+- ☐ Other (explain below) <!-- e.g., 'Adding new feature X, which is not covered by existing categories.' -->
 
 ---
 
