@@ -1,164 +1,140 @@
-# 🔒 **REPO_LOCK.md — Canonical Hash Registry & Repository Lock**
+# 🔒 REPO_LOCK — Canonical Hash Registry & Repository Lock
 
-*(UPDATED — Authority Chain Added)*
-
-**Repository:** Teos-International-Civic-Blockchain-Constitution (ICBC)
-**Maintainer / Coordinating Authority:** Elmahrosa International
-**Governing Law & Venue:** Cairo, Arab Republic of Egypt
-**Status:** **CONSTITUTIONALLY LOCKED — CANONICAL SOURCE OF TRUTH**
+**Repository:** Teos-International-Civic-Blockchain-Constitution  
+**Maintainer / Constitutional Authority:** Elmahrosa International  
+**Jurisdiction & Governing Law:** Arab Republic of Egypt  
+**Status:** 🔴 **IMMUTABLE ROOT — CONSTITUTIONALLY LOCKED**
 
 ---
 
 ## 1. Purpose & Legal Effect
 
-This document constitutes the **Canonical Hash Registry** and **Repository Lock Declaration** for the
-**International Civic Blockchain Constitution (ICBC)**.
+This document establishes the **Repository Lock** and **Canonical Hash Registry**
+for the **International Civic Blockchain Constitution (ICBC)**.
 
-It definitively establishes:
+It has **binding constitutional force**.
 
-* Which documents are **constitutionally binding**
-* Which cryptographic hashes are **legally authoritative**
-* The exclusive conditions under which **any modification is valid**
+From the moment this file is committed:
 
-Any discrepancy between a document’s content and its registered hash renders it
-**non-canonical, void, and without legal effect**.
+- This repository becomes the **immutable root of authority**
+- This repository is the **sole canonical source** of the ICBC
+- Any unauthorized change is **null, void, and without legal or technical effect**
 
-This file is **operative law**, not descriptive documentation.
-
----
-
-## 2. Constitutional Authority
-
-This Registry is binding under:
-
-* **International Civic Blockchain Constitution (ICBC)**
-* **Article IX — Cryptographic Enforcement of Authority**
-* **ICBC-ANNEX-CI-01 — Cryptographic Integrity & Evidentiary Status**
-
-This file is the **single source of truth** for document integrity in this repository.
+This file is **operative constitutional law**, not documentation.
 
 ---
 
-## 3. Canonical Hash Registry (Authoritative)
+## 2. Constitutional Supremacy
 
-**Hash Standard**
+The ICBC is the **highest authority** in the TEOS / Elmahrosa Sovereign Stack.
 
-* Algorithm: **SHA-256**
-* Encoding: **UTF-8**
-* Digest format: **lowercase hexadecimal**
+Authority flows strictly downward:
 
-| File Reference                        | SHA-256 Hash                                                       | Status | Date Locked    | Version |
-| ------------------------------------- | ------------------------------------------------------------------ | ------ | -------------- | ------- |
-| `CONSTITUTION.md`                     | `<INSERT_HASH>`                                                    | LOCKED | `<YYYY-MM-DD>` | 1.0.0   |
-| `LICENSE.md`                          | `<INSERT_HASH>`                                                    | LOCKED | `<YYYY-MM-DD>` | 1.0.0   |
-| `docs/AUTHORITY-CHAIN.md`             | `571592d856dcc51999b3a766eb4ce1992c7921890376b9b963fce43bca13449e` | LOCKED | 2026-01-28     | 1.0.0   |
-| `06_PAI_RECEIPT_SPEC.md`              | `571592d856dcc51999b3a766eb4ce1992c7921890376b9b963fce43bca13449e` | LOCKED | 2026-01-28     | PAI-1.0 |
-| `docs/09_AUTHORIZATION_STAMP_SPEC.md` | `<INSERT_HASH>`                                                    | LOCKED | `<YYYY-MM-DD>` | 1.0     |
-| `contracts/PAIRegistry.contract.md`   | `<INSERT_HASH>`                                                    | LOCKED | `<YYYY-MM-DD>` | 1.0     |
-| `annexes/ICBC-ANNEX-CI-01.md`         | `<INSERT_HASH>`                                                    | LOCKED | `<YYYY-MM-DD>` | 1.0.0   |
-
-> ⚠️ **Any file listed above whose computed hash does not exactly match this registry
-> SHALL be deemed altered and constitutionally void.**
-
----
-
-## 4. Root-of-Trust Definition (Exclusive)
-
-The following files constitute the **exclusive Root of Trust**:
-
-**Authoritative Root Files**
-
-* `REPO_LOCK.md`
-* `CONSTITUTION.md`
-* `LICENSE.md`
-* `docs/AUTHORITY-CHAIN.md`
-
-**Explicitly Non-Authoritative Mirrors**
-
-* `docs/CONSTITUTION.md` *(derived mirror — must never be edited directly)*
-
-Any modification to Root-of-Trust files **MUST** include:
-
-* Regenerated SHA-256 hashes
-* Update to this Registry
-* **Signed commit** by the Coordinating Authority
-
----
-
-## 5. Verification Procedure (Public & Court-Admissible)
-
-```bash
-sha256sum docs/AUTHORITY-CHAIN.md
 ```
 
-Expected output **must equal**:
+ICBC (This Repository)
+↓
+TEOS Governance
+↓
+Execution Systems
+↓
+Applications & Deployments
 
 ```
-571592d856dcc51999b3a766eb4ce1992c7921890376b9b963fce43bca13449e
+
+No repository, automation, maintainer, or fork may override this authority.
+
+---
+
+## 3. Immutable Root Declaration
+
+This repository is hereby declared:
+
+- 🔒 **Constitutionally Locked**
+- 🧱 **Non-Forkable for Authority**
+- ⚖️ **Legally and Cryptographically Binding**
+
+Forks may exist for reference **only**.  
+Forks **do not** carry constitutional authority.
+
+---
+
+## 4. Canonical Files (Root of Trust)
+
+The following files constitute the **constitutional root set**.
+Their contents and hashes define the ICBC.
+
+| File Path | Status |
+|----------|--------|
+| `CONSTITUTION.md` | Canonical |
+| `REPO_LOCK.md` | Canonical |
+| `docs/AUTHORITY-CHAIN.md` | Canonical |
+| `annexes/` | Canonical |
+| `articles/` | Canonical |
+
+Any file not listed above has **no constitutional standing**.
+
+---
+
+## 5. Canonical Hash Registry (Authoritative)
+
+The following cryptographic hashes are **legally and constitutionally binding**.
+Any discrepancy between content and hash renders the file **non-canonical and invalid**.
+
+### 🔐 Registered Hashes
+
 ```
 
-No proprietary tooling is required.
+File Path : docs/AUTHORITY-CHAIN.md
+Algorithm : SHA256
+Hash      : 571592D856DCC51999B3A766EB4CE1992C7921890376B9B963FCE43BCA13449E
+
+```
+
+> This hash is final.  
+> It MUST NOT be recalculated, replaced, or altered outside a lawful amendment process.
 
 ---
 
-## 6. Repository Lock — Finality Declaration
+## 6. Amendment Rules (Absolute)
 
-As of the signed commit establishing this Registry:
+Amendments to the ICBC are permitted **only** if ALL conditions are met:
 
-* Constitutional texts
-* Authority-chain doctrine
-* Cryptographic enforcement mechanisms
-* PAI & Authorization frameworks
+1. Explicit constitutional procedure is followed  
+2. Amendment is approved by the recognized constitutional authority  
+3. New hashes are generated and recorded in this Registry  
+4. The Repository Lock is reaffirmed  
 
-are **final, authoritative, and locked**.
-
-No CI system, automation, maintainer, or vote may override this lock.
+Any change outside this process is **constitutionally void**.
 
 ---
 
-## 7. Permitted Non-Breaking Changes
+## 7. Enforcement Clause
 
-Allowed **without breaking constitutional lock**:
+- Automation MAY enforce the Constitution  
+- Automation MAY NOT modify the Constitution  
+- Execution NEVER creates authority  
 
-* Translations (Arabic, French, etc.)
-* Rendered outputs (PDF / HTML)
-* Educational material
-* Tooling or CI that does **not** alter locked files
-
----
-
-## 8. Amendment Rules (Strict)
-
-No registry entry may be modified unless **all** conditions occur:
-
-1. Formal constitutional amendment
-2. Explicit version increment
-3. Publication of new SHA-256 hashes
-4. Direct update to this Registry
-5. **Signed commit** by Coordinating Authority
-
-Absent all five → **no legal effect**.
+> **Law governs code.**  
+> **Authority governs execution.**
 
 ---
 
-## 9. Supremacy Clause
+## 8. Final Declaration
 
-In case of conflict:
+By committing this file, Elmahrosa International formally declares:
 
-1. **ICBC prevails**
-2. **ICBC-ANNEX-CI-01 prevails**
-3. **This Registry prevails** over any unstamped artifact
+- This repository is the **immutable constitutional root**
+- This lock is **intentional, permanent, and enforceable**
+- No future claim may override this declaration without lawful amendment
 
 ---
 
-## 10. Declaration & Signature
+**Declared by:** Elmahrosa International  
+**Constitutional Authority:** International Civic Blockchain Constitution (ICBC)  
+**Effective Upon Commit:** Immediate  
 
-This Registry is **active, binding, and enforceable** upon signed commit.
-
-**Declared by:** Elmahrosa International
-**Founder & Constitutional Authority:** Ayman Seif
-**Date:** 2026-01-28
-
-**Issued under one sovereign charter.**
+🔒 **END OF REPO LOCK**
+```
 
 ---
