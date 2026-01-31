@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OWNER="Elmahrosa"
-REPO="Teos-International-Civic-Blockchain-Constitution"
+# Dynamically determine owner and repo from git remote
+REMOTE_URL="$(git config --get remote.origin.url)"
+if [[ $REMOTE_URL =~ github.com[/:]([^/]+)/([^/]+) ]]; then
+    OWNER="${BASH_REMATCH[1]}"
+    REPO="${BASH_REMATCH[2]%.git}"
+else
+    echo "❌ Could not parse owner and repo from git remote 'origin'."
+    echo "Please ensure 'origin' points to a GitHub repository."
+    exit 1
+fi
 BRANCH="main"
 
 cmd="${1:-}"
