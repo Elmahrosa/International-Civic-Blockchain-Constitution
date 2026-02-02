@@ -1,0 +1,44 @@
+govstack_alignment_version: "1.0"
+teos_version: "2026-Pilot"
+issuer: "Elmahrosa International"
+last_updated: "2026-01-31"
+
+mapping:
+  identity:
+    govstack_block: "eID"
+    teos_module: "TEOS-Identity"
+    status: "aligned"
+    protocols:
+      - "DID (W3C)"
+      - "Verifiable Credentials (VC)"
+      - "OpenID Connect (OIDC)"
+    pii_on_chain: false
+    notes: "Identity verification happens off-chain; proofs are stored on-chain."
+
+  payments:
+    govstack_block: "Payments"
+    teos_module: "BankChain / Nilex-Settlement"
+    status: "out_of_scope_pilot"
+    notes: "Pilot focuses on identity and data exchange layers only."
+
+  data_exchange:
+    govstack_block: "Information Mediator (IM)"
+    teos_module: "Nilex"
+    status: "aligned"
+    protocols:
+      - "RESTful API (OpenAPI Spec)"
+      - "JSON Web Tokens (JWT)"
+    security: "TLS Mutual Authentication + Audit Log Hashing"
+    notes: "Data does not leave sovereign mesh without cryptographic consent."
+
+  registries:
+    govstack_block: "Registries"
+    teos_module: "Core-Registry"
+    status: "aligned"
+    architecture: "Decentralized Identifier (DID) with cryptographic anchors on public and sovereign-ledgers"
+    notes: "Immutable audit trail for registry mutations."
+
+compliance_summary:
+  gdpr_compliant: true
+  data_minimization: true
+  interoperability: "OpenAPI based"
