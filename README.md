@@ -1,215 +1,83 @@
 <div align="center">
-  
-# 🏛️ Teos International Civic Blockchain Constitution  
 
-
+# 🏛️ International Civic Blockchain Constitution (ICBC)
+### The Sovereign Root of Trust for TEOS Egypt
 
 ![Standing](https://img.shields.io/badge/Standing-Supreme%20Charter%20—%20International-blue?style=for-the-badge)
 ![Governance](https://img.shields.io/badge/Governance-Constitutional%20Authority-gold?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-TESL%20Sovereign-red?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Canonical%20Source-black?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/Elmahrosa/Teos-International-Civic-Blockchain-Constitution?style=social)
+![Standard](https://img.shields.io/badge/Alignment-GovStack%20%7C%20W3C%20DID-green?style=for-the-badge)
 
-</div>
-
-<div align="center">
-
-### **Supreme Charter of the TEOS Sovereign Stack**
-
-🇪🇬 *Authored in Egypt — enforceable by institutions and nations worldwide.*
-
-**Law before code.**  
-**Governance before execution.**  
-**Human authority before automation.**
+**Law governs Code. Humans govern Systems. AI serves Authority.**
 
 </div>
 
 ---
 
-## Final Summary
+## 📜 Executive Summary
+The **International Civic Blockchain Constitution (ICBC)** is the supreme governance charter of the TEOS ecosystem. It establishes the legal and operational framework for **Sovereign Digital Public Infrastructure (DPI)**. 
 
-The **Teos International Civic Blockchain Constitution (ICBC)** is the **supreme
-governance and legal charter** of the TEOS ecosystem. It establishes a
-constitutionally governed civic blockchain framework designed to integrate
-distributed technologies with **human institutional authority**, international
-law, and public accountability.
-
-The Constitution defines the lawful boundaries within which blockchain systems,
-artificial intelligence, and digital public infrastructure may operate. It
-explicitly affirms that **law governs code**, and that all technical systems
-exist solely as instruments of authorized human governance.
+Unlike traditional permissionless protocols, the ICBC anchors digital execution in **human institutional authority**. It ensures that every automated action—whether by AI or smart logic—remains traceable, auditable, and subservient to national law and international standards.
 
 ---
 
-## Foundational Principles
+## 💎 Institutional Pillars
+To ensure "Justice-Ready" infrastructure, the ICBC enforces five non-negotiable pillars:
 
-The Constitution is anchored in five non-negotiable principles:
-
-1. **Sovereignty**  
-   Sovereignty resides in lawful human and institutional authority.  
-   No protocol, algorithm, token, or AI system may claim or generate sovereign
-   power.
-
-2. **Governance Before Execution**  
-   All execution is subordinate to prior governance authorization.  
-   Systems may enforce decisions, but may never originate authority.
-
-3. **Accountability and Auditability**  
-   All governance actions, executions, and enforcement outcomes must be
-   traceable, reviewable, and subject to constitutional audit.
-
-4. **Human Authority Over Automation**  
-   Artificial intelligence and automated systems are strictly
-   decision-support tools.  
-   Final authority always remains human, institutional, and accountable.
-
-5. **Jurisdictional Compatibility**  
-   The framework is designed to operate in harmony with national and
-   international legal systems, enabling lawful civic and public-sector
-   adoption.
+1. **Digital Sovereignty** Authority resides in lawful human institutions. No algorithm, AI agent, or decentralized protocol can originate sovereign power.
+2. **Policy-Before-Execution** Systems exist only to enforce pre-authorized human policy. Technical execution never creates new authority.
+3. **Forensic Auditability** Every governance event is cryptographically hashed and logged, creating a "Root of Trust" that is admissible in legal proceedings.
+4. **Human-in-the-Loop AI** Automated systems are strictly decision-support tools. Final authorization for high-impact actions requires verified human credentials.
+5. **Jurisdictional Interoperability** Engineered to align with **Egypt’s Law 194/2020** and global standards (GDPR, GovStack), ensuring a safe path for public-sector adoption.
 
 ---
 
-## Constitutional Scope
+## 🏗️ The Chain of Authority (Non-Bypassable)
+TEOS architecture follows a strictly downward flow of legitimacy. No system or API may operate outside this hierarchy:
 
-The Constitution defines:
-
-- The structure and limits of civic participation  
-- The separation between governance, compliance, and execution  
-- The lawful use of blockchain and AI in public infrastructure  
-- The licensing and authority model (**TESL**) governing all TEOS systems  
-- The **non-bypassable** flow of authority from charter to execution  
-
-No component of the TEOS ecosystem may operate outside the scope defined by this
-Constitution.
+1. **The ICBC (This Constitution)** → The Supreme Root of Trust.
+2. **TEOS-FORGE** → The DPI Factory & Integration Layer.
+3. **Executable Governance** → Logic that enforces the Charter.
+4. **AI-Guard & Auditor** → Continuous compliance oversight.
+5. **Sovereign Execution Kernel** → Low-level system operations.
 
 ---
 
-## Constitutional Standing
+## 📂 Repository Architecture
+This repository serves as the **Single Source of Truth** for the stack's legitimacy:
 
-- **Chain Position:** #1 — Supreme Charter  
-- **Scope:** International · Civic · Sovereign  
-- **Authority Type:** Human institutional authority codified into enforceable doctrine  
-
-This repository is the **single canonical source of truth** for:
-
-- Sovereignty doctrine  
-- Governance legitimacy  
-- Execution authorization  
-- Licensing (TESL)  
-- Audit and accountability principles  
-
-> Any implementation or interpretation that contradicts this Constitution  
-> is **constitutionally void**.
+* **`CONSTITUTION.md`**: The machine-readable and human-verifiable binding charter.
+* **`LICENSE.md`**: The **TEOS Egypt Sovereign License (TESL)**—defining the rights for state and institutional use.
+* **`REPO_LOCK.md`**: The cryptographic hash registry ensuring the immutability of the governance core.
+* **`annexes/`**: Technical schedules for National Identity (DID) and Data Exchange standards.
 
 ---
 
-## Authority Flow (Non-Negotiable)
+## ⚖️ Licensing: TESL Sovereign
+All components of the TEOS stack are governed by the **TEOS Egypt Sovereign License (TESL)**. 
 
-All authority flows **downward only**:
-
-```text
-Teos International Civic Blockchain Constitution (ICBC)
-                    ↓
-                TEOS-FORGE
-                    ↓
-           Governance Frameworks
-                    ↓
-         Compliance & AI Controls
-                    ↓
-        Sovereign Execution Systems
-                    ↓
-            APIs / SDKs / Services
-````
-
-⬆️ **Execution never creates authority.**
+* **Audit Rights:** Fully open for regulatory and institutional review.
+* **Sovereignty Protection:** Prohibits unauthorized forks that claim sovereign legitimacy.
+* **Commercial Use:** Restricted to authorized partners to ensure public-interest alignment.
 
 ---
 
-## What This Repository Is
-
-* ✅ The supreme charter of the TEOS ecosystem
-* ✅ The root of all governance and execution authority
-* ✅ The canonical source of the **TEOS Egypt Sovereign License (TESL)**
-* ✅ The constitutional framework governing AI, compliance, and execution
-* ✅ The reference constitution for national or institutional adoption
-
----
-
-## What This Repository Is Not
-
-* ❌ An execution engine or protocol
-* ❌ A smart contract or DAO
-* ❌ A public API or SDK
-* ❌ A commercial open-source framework
-* ❌ A permissionless blockchain system
-
----
-
-## Repository Structure
-
-```text
-/
-├─ CONSTITUTION.md      # Binding constitutional charter
-├─ LICENSE.md           # TESL — Sovereign License (canonical)
-├─ REPO_LOCK.md         # Root of Trust & immutability rules
-├─ annexes/             # Binding annexes and technical schedules
-├─ docs/                # Readiness, adoption, and references
-└─ README.md            # This file
-```
-
----
-
-## License — TESL
-
-All materials in this repository are governed exclusively by the
-**TEOS Egypt Sovereign License (TESL)**.
-
-* **Canonical license (single source of truth):**
-  [https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md](https://github.com/Elmahrosa/Teos-International-Civic-Blockchain-Constitution/blob/main/LICENSE.md)
-
-TESL enforces:
-
-* Sovereign attribution
-* Non-forkability of authority
-* Institutional usage constraints
-* Prohibition of false or misleading claims of sovereignty
-
----
-
-## Adoption & Usage
-
-This Constitution may be **referenced** by:
-
-* Governments
-* Public institutions
-* Civic digital infrastructure programs
-* Academic, legal, and policy research
-
-Any **execution, deployment, or commercialization** requires **explicit
-constitutional compliance** and licensing review under TESL.
-
----
-
-## Final Doctrine
-
-> **Law governs code.**
-> **Humans govern systems.**
-> **AI assists — it never rules.**
+## 🎯 Target Adoption
+The ICBC is designed for:
+* **National Governments** seeking vendor-independent Digital Identity.
+* **Intergovernmental Organizations (IFIs)** requiring auditable grant and data flows.
+* **Central Banks** evaluating secure, policy-governed infrastructure.
+* **Smart City Authorities** implementing auditable civic services.
 
 ---
 
 <div align="center">
 
-**Founding Authority:** Elmahrosa International
-**Founder & Constitutional Author:** Ayman Seif
+**Founding Authority:** Elmahrosa International  
+**Chief Architect:** Ayman Seif  
 
-📧 [ayman@teosegypt.com](mailto:ayman@teosegypt.com)
-🌐 [https://teosegypt.com](https://teosegypt.com)
+[Institutional Inquiry](mailto:ayman@teosegypt.com) | [Sovereign Portal](https://teosegypt.com)
 
-🇪🇬 *A civic constitution authored in Egypt — designed for the world.*
+*“Engineered in Egypt. Governed by Law. Scaled for Nations.”*
 
 </div>
-```
-
----
